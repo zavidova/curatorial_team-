@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>test</title>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".paywall").hide();
+    });
+    $("#show").click(function(){
+        $(".paywall").show();
+    });
+});
+</script>
+
+
+
+</head>
+
+
+</head>
+<body>
+
+
+<!--general info-->
+<div class="generalinfo"> 
+
+<p>I do not scale (yet)</p>
+
+	</div>
+
+
+<!--paywall-->
+<div class="paywall">
+
+	<p>I am a sexy paywall</p>
+
+<button id="hide">Totally agree</button>
+
+
+
+
+
+</div>
+
+
+
+
+<!--the layer with all the projects -->
+<div class="projects">
+
+<!--each project separately -->	
+	
+<div class="project" id="project_01"> 
+
+<img src="files/computer.jpg">
+
+</div>
+
+
+
+<div class="project" id="project_02">
+	<img src="files/librarian.jpeg">
+
+ </div>
+
+<div class="project" id="project_03"> 
+<img src="files/icon.png">
+
+</div>
+
+<div class="project" id="project_04"> 
+<img src="files/computer.jpg"></div>
+
+<div class="project" id="project_05">
+	<img src="files/librarian.jpeg"> </div>
+
+<div class="project" id="project_06"> 
+	<img src="files/icon.png"></div>
+
+<div class="project" id="project_07">
+<img src="files/computer.jpg"> </div>
+
+<div class="project" id="project_08"> 
+<img src="files/computer.jpg"></div></div>
+
+<div class="project" id="project_09">
+<img src="files/computer.jpg"></div> </div>
+
+
+
+<script type="text/javascript">
+	
+
+
+		function randomFromTo(from, to){
+			return Math.floor(Math.random() * (to - from + 1) + from);
+		}
+  
+		function moveRandom(obj) {
+			/* get container position and size
+			 * -- access method : cPos.top and cPos.left */
+			var cPos = $('.projects').offset();
+			var cHeight = $('.projects').height();
+			var cWidth = $('.projects').width();
+			
+			// get box padding (assume all padding have same value)
+			var pad = parseInt($('.projects').css('padding-top').replace('px', ''));
+			
+			// get movable box size
+			var bHeight = obj.height();
+			var bWidth = obj.width();
+			
+			// set maximum position
+			maxY = cPos.top + cHeight - bHeight - pad;
+			maxX = cPos.left + cWidth - bWidth - pad;
+			
+			// set minimum position
+			minY = cPos.top + pad;
+			minX = cPos.left + pad;
+			
+			// set new position			
+			newY = randomFromTo(minY, maxY);
+			newX = randomFromTo(minX, maxX);
+			
+			obj.animate({
+
+				top: newY,
+				left: newX,
+
+
+				} , 2000, function() {
+          moveRandom(obj);
+
+
+
+
+			});
+		}
+$('.project').each(function() {
+moveRandom($(this));
+});
+
+
+
+
+</script>
+
+
+</div>
+
+
+
+</body>
+</html>
