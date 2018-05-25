@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  svenson</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="scss/style.css">
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" ></script>
+
+  
+</head>
+
+<body>
+
+<div id="modaluser">
+    <div>
+        <div id="popup-close">X</div>
+        <h2>Content Goes Here</h2>
+    </div>
+</div>
+
+
+  <div class="timer">
+  <p id="time">00:00:00</p>
+</div>
+
+<div id="timezone"></div>
+
+<div>
+    <script language="Javascript">
+        document.write(geoplugin_countryCode());
+    </script>
+    <span> </span>
+    <script language="Javascript">
+        document.write(geoplugin_continentCode());
+    </script>
+</div>
+
+  <div class="counter"><?php include "counter.php"; ?></div>
+
+<div class="position">
+              X<span id="posX">000</span>/Y<span id="posY">000</span>
+           </div>
+
+
+
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+<script>
+
+
+
+</script>
+</body>
+
+</html>

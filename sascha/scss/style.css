@@ -1,0 +1,29 @@
+.timer {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  font-family: nero, arial;
+  font-size: 3vw; }
+
+#modaluser {
+  border: 1px solid #000; }
+
+.show {
+  display: none; }
+
+.timezone {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  font-family: nero, arial;
+  font-size: 3vw; }
+
+.position {
+  position: fixed;
+  margin: 1em;
+  bottom: 0;
+  right: 0;
+  font-family: nero;
+  font-size: 3vw; }
+
+/*# sourceMappingURL=style.css.map */
