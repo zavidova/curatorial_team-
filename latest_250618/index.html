@@ -1,0 +1,167 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CelestialServices</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" ></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+	<!--<meta http-equiv="refresh" content="30"/> this refreshes the page every 30 seconds-->
+</head>
+
+<body>
+
+
+
+<!--paywall-->
+<!---<div class="paywall">
+	<div class="paywall-contents">
+		<p>I am a sexy paywall (but I don't scale very well)</p>
+
+		<p>Lorem ipsum dolor amet lumbersexual vape art party chia twee four loko master cleanse, YOLO austin trust fund. Subway tile umami intelligentsia mlkshk schlitz jean shorts twee succulents. Man bun synth affogato bicycle rights. Paleo PBR&B meditation before they sold out taxidermy. Ramps brooklyn authentic, copper mug yuccie farm-to-table sustainable irony godard viral meggings. Lomo vaporware godard four loko synth vexillologist biodiesel lo-fi.</p>
+
+		<p>Lomo squid hoodie freegan shoreditch, woke bicycle rights neutra mumblecore cold-pressed deep v roof party flannel. Prism kitsch lumbersexual locavore biodiesel thundercats. Ennui put a bird on it roof party glossier, brunch iceland irony cronut health goth vegan. Sartorial tote bag austin, literally banh mi shoreditch umami taxidermy squid vape deep v ethical taiyaki intelligentsia. Tattooed hella snackwave lomo lyft squid YOLO. Lo-fi sustainable post-ironic literally art party cold-pressed, single-origin coffee deep v affogato echo park bitters. Occupy small batch aesthetic jean shorts pug meditation.</p>
+
+		<button id="hide">Totally agree (define my position please)</button>
+
+
+	</div>
+
+
+</div>
+--->
+
+
+
+<!--the layer with all the projects -->
+<div class="projects">
+
+	<!--each project separately -->
+
+	<div class="project" id="project_01">
+
+		<img src="files/heikki.png">
+
+	</div>
+
+
+
+	<div class="project" id="project_02">
+		<img src="files/drama.jpg">
+
+	</div>
+
+	<div class="project" id="project_03">
+		<img src="files/icon.png">
+
+	</div>
+
+	<div class="project" id="project_04">
+		<img src="files/sherida.gif"></div>
+
+	<div class="project" id="project_05">
+		<img src="files/Essay_Asja_Image_1_new.jpg"> </div>
+
+	<div class="project" id="project_06">
+		<img src="files/essay_mateo.jpg"></div>
+
+	<div class="project" id="project_07">
+		<img src="files/stefanie1.png"> </div>
+
+	<div class="project" id="project_08">
+		<img src="files/the_stage_of_precarity_TEREZA/therodina_stageofprecarity_7.jpg"></div>
+
+<div class="project" id="project_09">
+	<img src="files/Júlia.jpg"></div>
+</div>
+
+
+
+
+
+
+
+<div id=watermark><img style="" src="images/watermark.png"></div>
+<div id=fullborder></div>
+
+<div id=maincontainer>
+
+<div id=toptitles>
+<div id=centertitle class=title>CelestialServices</div>
+<div id=lefttitle class=title>ServiçosCelestes</div>
+<div id=righttitle class=title>ServiçosCelestes</div>
+<div id=bottomlefttitle class=title>ServiçosCelestes</div>
+<div id=bottomrighttitle class=title>CelestialServices</div>
+
+</div>
+
+	<div id=lefttext>
+	<p>Sandberg Instituut<br>
+	Design Department<br>
+	Graduation 2018<br>
+	<br>
+	</p>
+	<p>15th—18th June<br>
+	De School<br>
+	Doctor Jan van Breemenstraat 1<br>
+	1056 AB Amsterdam</p>
+	</p>
+
+	</div>
+	<div id=righttext>
+	<a href=#>Mateo Broillet</a><br>
+	<a href=#>Jùlia Carvalho de Aguiar</a><br>
+	<a href=#>Asja Keeman</a><br>
+	<a href=#>Anastasia Kubrak</a><br>
+	<a href=#>Sherida Kuffour</a><br>
+	<a href=#>Heikki Lotvonen</a><br>
+	<a href=#>Stefanie Luchtenberg</a><br>
+	<a href=#>Juan Pablo Mejia</a><br>
+	</div>
+
+</div>
+
+<img style="position: fixed; left: 20px;" src="images/mood.png">
+
+<div class="bottom-paremeters">
+	<div class="timer">
+		<p id="time">00:00:00</p>
+	</div>
+
+	<div id="clock" class="digital"></div>
+
+
+	<div id="timezone"></div>
+
+	<div>
+		<script language="Javascript">
+			document.write(geoplugin_countryCode());
+		</script>
+		<span> </span>
+		<script language="Javascript">
+			document.write(geoplugin_continentCode());
+		</script>
+	</div>
+
+	<div class="counter"><?php include "counter.php"; ?></div>
+
+	<div class="position">
+		X<span id="posX">000</span>/Y<span id="posY">000</span>
+	</div>
+</div>
+
+<img style="left: 30%; top: 15%;" class=thumb src="images/julia.jpg">
+<img style="left: 300px; top: 29%;" class=thumb src="images/stefanie1.png">
+<img style="right: 500px; top: 200px;" class=thumb src="images/therodina_stageofprecarity_4.png">
+<img style="right: 30%; top: 500px;" class=thumb src="images/therodina_stageofprecarity_6.jpg">
+<img style="left: 1300px; top: 9%;" class=thumb src="images/stefanie1.png">
+<img style="left: 400px; bottom: 100px;" class=thumb src="images/TIWWJ%20ss%20_0003_Layer%204.jpg">
+
+<script  src="js/index.js"></script>
+
+</div>
+
+</body>
+</html>

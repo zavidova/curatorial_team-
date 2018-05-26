@@ -1,11 +1,25 @@
+.bottom-paremeters {
+  display: flex;
+  width: 100%;
+  padding: 0 2%;
+  bottom: 2%;
+  position: fixed;
+  font-family: nero, arial;
+  font-size: 1vw;
 
+div {
+  flex: 1;
+  text-align: center;
+}
+
+  p {
+    margin: 0;
+  }
+
+}
 
 .timer {
-  position:fixed;
-  bottom:0;
-  left: 2%;
-  font-family: nero, arial;
-  font-size: 3vw;
+
 }
 
 #modaluser {
@@ -17,18 +31,9 @@
 }
 
 .timezone {
-  position:fixed;
-  bottom:0;
-  left: 50%;
-  font-family: nero, arial;
-  font-size: 3vw;
+
 }
 
 .position {
-    position:fixed;
- margin: 1em;
-  bottom: 0;
-right: 0;
-  font-family: nero;
-  font-size: 3vw;
+
 }

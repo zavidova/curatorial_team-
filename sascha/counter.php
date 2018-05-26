@@ -18,6 +18,6 @@
 
            } else { // It's not the first time, do not update the counter but show the total hits stored in session
              $counter = $_SESSION['counter'];
-             echo" <p> Visitor Counter: ". $counter . " </p> " ;
+             echo" <p> Visitor Number: ". $counter . " </p> " ;
            }
 ?>
