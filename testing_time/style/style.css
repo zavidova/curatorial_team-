@@ -1,0 +1,375 @@
+/* RESET CODE */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*  */
+
+
+html *
+{
+	animation-name: moodchange;
+	animation-iteration-count: infinite;
+	animation-duration: 20s;
+	animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+@keyframes moodchange {
+    0%   {filter: hue-rotate(00deg);}
+    20%  {filter: hue-rotate(90deg);}
+    40%  {filter: hue-rotate(180deg);}
+    60% {filter: hue-rotate(270deg);}
+    80% {filter: hue-rotate(360deg);}
+    100% {filter: hue-rotate(0deg);}
+}
+
+
+
+body{
+	background-color: #ecece7;
+	font-family: Nero;
+	font-size: 40;
+	letter-spacing: -0.02em;
+	height: 100vh;
+	line-height: 110%;
+	overflow: hidden;
+}
+
+a{
+	color: initial;
+	text-decoration: none;
+}
+
+
+.thumb{
+	position: fixed;
+	width: 10%;
+	z-index: 0;
+	filter: blur(10px) invert(58%);
+	mix-blend-mode: exclusion;
+	opacity: 0.7;
+}
+
+.thumb:hover{
+	filter: blur(0px) invert(0%);
+	opacity: 1;
+	mix-blend-mode: none;
+}
+
+#watermark{
+	position: fixed;
+	z-index: -4;
+	top:0;
+	opacity: 0.3;
+	width: 100%;
+}
+.title{
+	font-family: helvetica;
+	font-size: 90%;
+	}
+
+
+#fullborder{
+	position: fixed;
+	    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	width: 100%;
+	top:0;
+	height: 100%;
+    border: 3px solid red;
+    z-index: 4;
+	pointer-events: none;
+}
+
+/*#maincontainer{
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+	top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #0285ff;
+	outline: 2px solid yellow;
+
+}
+*/
+
+#maincontainer{
+	position: fixed;
+	width: calc(100% - 40px);
+	margin-left: 20px;
+	margin-right: 20px;
+	top: 20px;
+	height: 89%;
+	border: 2px solid #0285ff;
+	outline: 2px solid yellow;
+
+}
+
+#lefttitle{
+	position: fixed;
+	left: -100px;
+	top: 20px;
+}
+
+#righttitle{
+	position: fixed;
+	right: -100px;
+	top: 20px;
+}
+
+#centertitle{
+	position: fixed;
+	left: 40%;
+	top: 20px;
+	text-align: center;
+}
+
+#bottomlefttitle{
+	position: fixed;
+	bottom: 60px;
+	left: 18%;
+}
+
+#bottomrighttitle{
+	position: fixed;
+	bottom: 60px;
+	right: 18%;
+}
+
+#lefttext{
+	position: absolute;
+	left: 6px;
+	top: 30px;
+	text-align: left;
+}
+
+#righttext{
+	position: absolute;
+	right: 6px;
+	top: 30px;
+	text-align: right;
+}
+
+
+/* sascha */
+.bottom-paremeters {
+	display: flex;
+	width: 100%;
+	padding: 0 2%;
+	bottom: 2%;
+	position: fixed;
+	font-family: nero, arial;
+	font-size: 1vw; }
+.bottom-paremeters div {
+	flex: 1;
+	text-align: center; }
+.bottom-paremeters p {
+	margin: 0; }
+
+#modaluser {
+	border: 1px solid #000; }
+
+.show {
+	display: none; }
+
+
+/* KARINA css */
+
+
+
+
+
+/* hourly changes */
+
+
+.day { background-color:  #E8E8E8; }
+.sunset { background-color: #C0C0C0; }
+.night { background-color: #696969; }
+
+
+
+
+
+.mobile {
+	display: none;
+
+}
+
+
+.print {
+	display: none;
+}
+
+
+.paywall {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 30;
+	position: fixed;
+	background-color: white;
+
+
+	animation: fadeIn ease 10s;
+	-webkit-animation: fadeIn ease 10s;
+	-moz-animation: fadeIn ease 10s;
+	-o-animation: fadeIn ease 2s;
+	-ms-animation: fadeIn ease 2s;
+}
+
+
+@keyframes fadeIn{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+.paywall-contents {
+
+	width: 50%;
+	margin: 20px auto;
+	border: 1px solid black;
+
+}
+
+
+.paywall p {
+	color: black;
+	font-size: 1.5rem;
+	padding: 20px;
+
+}
+
+#hide {
+
+	width: 50%;
+	margin: 20px auto;
+	z-index: 40;
+	position: fixed;
+	border-radius: 20px 20px 20px 20px;
+	font-size: 2rem;
+
+}
+
+
+.generalinfo {
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	border: 1px solid black;
+	z-index: 20;
+	top: 0;
+	left: 0;
+
+}
+
+
+.projects {
+	display: block;
+	width: 100%;
+	min-height: 900px;
+	background: none;
+}
+.project {
+
+	min-width: 50px;
+	min-height: 50px;
+	position: absolute;
+}
+
+.project img {
+	max-width: 200px;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+
+	.desktop {display: none;}
+
+	.mobile {display: inline;
+		position: fixed;
+		left: 120px;
+		top: 120px;
+		color: white;
+		font-size: 8rem;
+	}
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media print {
+
+
+	.desktop {
+		display: none;
+	}
+
+
+	.print{
+		display: inline;
+		color: black;
+	}
+
+}
