@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CelestialServices</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" ></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+	<script src="js/html2pdf.bundle.min.js"></script>
+	<!--<meta http-equiv="refresh" content="30"/> this refreshes the page every 30 seconds-->
+</head>
+
+<style>
+	body {
+		text-align: center;
+	}
+
+
+	.ontop {
+		width: 100vw;
+		height: 100vh;
+		background-color: #ddd;
+		z-index: 3;
+	}
+
+	.counter {
+		border: 1px solid;
+		border-radius: 50px;
+		width: 420px;
+		height: 210px;
+		box-shadow: 0 0 430px pink;
+		font-size: 110px;
+		margin: 0 auto;
+		text-shadow: 0 0 5px;
+		line-height: 58px;
+	}
+</style>
+
+<body>
+<div class="ontop"></div>
+<div id="print">
+	<div class="timer">
+		<p id="time">00:00:00</p>
+	</div>
+
+	<div id="clock" class="digital"></div>
+
+
+	<div id="timezone"></div>
+
+	<div>
+		<script language="Javascript">
+			document.write(geoplugin_countryCode());
+		</script>
+		<span> </span>
+		<script language="Javascript">
+			document.write(geoplugin_continentCode());
+		</script>
+	</div>
+
+	<div class="counter"><?php include "counter.php"; ?></div>
+
+	<div class="position">
+		X<span id="posX">000</span>/Y<span id="posY">000</span>
+	</div>
+	</div>
+
+<script  src="js/index.js"></script>
+<script>
+	$("body").click(function(){
+	var element = document.getElementById('print');
+	html2pdf(element);
+	});
+</script>
+
+
+</div>
+
+</body>
+</html>
