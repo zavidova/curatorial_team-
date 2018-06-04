@@ -42,6 +42,11 @@ html *
     filter: hue-rotate(360deg); }
   100% {
     filter: hue-rotate(0deg); } }
+@font-face {
+  font-family: 'Herculanum';
+  src: url("../assets/fonts/Herculanum.woff2") format("woff2"), url("../assets/fonts/Herculanum.woff") format("woff"), url("../assets/fonts/Herculanum.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 body {
   font-size: 40px;
   background-color: #ecece7;
@@ -70,7 +75,8 @@ a {
 
 .watermark {
   position: fixed;
-  z-index: -4;
+  z-index: 40;
+  pointer-events: none;
   top: 0;
   opacity: 0.3;
   width: 100%; }
@@ -226,7 +232,7 @@ a {
   padding: 0 2%;
   bottom: 2%;
   position: fixed;
-  font-family: nero, arial;
+  font-family: Herculanum, Times, Serif;
   font-size: 1vw; }
 
 .bottom-paremeters div {
@@ -255,7 +261,13 @@ a {
 .print {
   display: none; }
 
+.trigger-paywall {
+  cursor: pointer; }
+
 .paywall {
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -264,12 +276,75 @@ a {
   overflow: hidden;
   z-index: 30;
   position: fixed;
-  background-color: white;
-  animation: fadeIn ease 10s;
-  -webkit-animation: fadeIn ease 10s;
-  -moz-animation: fadeIn ease 10s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s; }
+  background-color: #fffffff7; }
+  .paywall .paywall-contents {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    width: 50%;
+    margin: 3vh auto;
+    border: 3px solid #fbff00;
+    height: 93vh;
+    overflow: scroll;
+    background-color: #fff; }
+    .paywall .paywall-contents p {
+      color: black;
+      font-size: 0.6em;
+      line-height: normal;
+      padding: 20px;
+      text-shadow: 0 1px #ddd; }
+    .paywall .paywall-contents .button {
+      text-align: center;
+      margin: 1em auto;
+      width: 200px;
+      /* background-color: #0f7a02; */
+      color: #000000;
+      line-height: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      font-size: 0.8em;
+      padding: 0.5em;
+      border-radius: 1px;
+      font-family: helvetica ,sans-serif;
+      font-weight: 100;
+      bottom: 0;
+      cursor: pointer; }
+
+.hide-paywall {
+  transition: 1s;
+  background-color: transparent;
+  pointer-events: none;
+  visibility: hidden; }
+
+.hide-paywall-content {
+  transition: 1s;
+  filter: blur(100px);
+  opacity: 0;
+  visibility: hidden; }
+
+.show-paywall-fast {
+  transition: 1s;
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+.show-paywall-content-fast {
+  transition: 1s;
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  display: block;
+  z-index: 10000; }
+
+.show-loader {
+  display: none; }
 
 @keyframes fadeIn {
   0% {
@@ -296,16 +371,6 @@ a {
     opacity: 0; }
   100% {
     opacity: 1; } }
-.paywall-contents {
-  width: 50%;
-  margin: 20px auto;
-  border: 1px solid black; }
-
-.paywall p {
-  color: black;
-  font-size: 1.5rem;
-  padding: 20px; }
-
 #hide {
   width: 50%;
   margin: 20px auto;

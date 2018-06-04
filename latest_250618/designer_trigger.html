@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<div class="loader"></div>
 
 <div id="tail"></div>
 <div id="tail-vert"></div>
@@ -26,7 +27,7 @@
 -->
 
 <!--paywall-->
-<!---<div class="paywall">
+<div class="paywall">
 	<div class="paywall-contents">
 		<p>I am a sexy paywall (but I don't scale very well)</p>
 
@@ -34,14 +35,14 @@
 
 		<p>Lomo squid hoodie freegan shoreditch, woke bicycle rights neutra mumblecore cold-pressed deep v roof party flannel. Prism kitsch lumbersexual locavore biodiesel thundercats. Ennui put a bird on it roof party glossier, brunch iceland irony cronut health goth vegan. Sartorial tote bag austin, literally banh mi shoreditch umami taxidermy squid vape deep v ethical taiyaki intelligentsia. Tattooed hella snackwave lomo lyft squid YOLO. Lo-fi sustainable post-ironic literally art party cold-pressed, single-origin coffee deep v affogato echo park bitters. Occupy small batch aesthetic jean shorts pug meditation.</p>
 
-		<button id="hide">Totally agree (define my position please)</button>
+		<div class="button">OK I Agree</div>
 
 
 	</div>
 
 
 </div>
---->
+
 
 
 
@@ -112,7 +113,7 @@
 	</div>
 
 	<div class="lefttext">
-		<p>Sandberg Instituut<br>
+		<p class="trigger-paywall">Sandberg Instituut<br>
 			Design Department<br>
 			Graduation 2018<br>
 			<br>
@@ -282,9 +283,14 @@
 </div>
 
 <img style="    position: fixed;left: 20px;bottom: 36px;" src="images/mood.png">
-<div class="logos"><img src="images/assets/logos.svg"></div>
+<div class="logos"><img src="assets/logos.svg"></div>
 
 <div class="bottom-paremeters">
+
+	<div>Mood:<span>Tired</span>
+		</div>
+
+
 	<div class="timer">
 		<p id="time">00:00:00</p>
 	</div>
@@ -292,7 +298,6 @@
 	<div id="clock" class="digital"></div>
 
 
-	<div id="timezone"></div>
 
 	<div>
 		<script language="Javascript">
