@@ -54,7 +54,7 @@ $(document).ready(function(){
   });
 
   $("#anastasia").mouseover(function() {
-  $( "#centertitle" ).text( "НебесныеYслуги" );
+  $( "#centertitle" ).text( "НебесныеУслуги" );
 });
 
 $("#julia").mouseover(function() {
@@ -99,6 +99,14 @@ $(document).ready(function(){
     $('.mateo-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
+
+  /* k added - this script is to connect thumbnail image with the name */
+
+$('#mateo-image').click(function(){
+$('#mateo').addClass("invert");
+  });
+
+
 
   $('#julia').click(function(){
     $('#righttext a').removeClass("active-designer");
@@ -339,3 +347,11 @@ $(document).ready(function(){
     $('#posY').html(e.pageY);
   });
 });
+
+
+/* K added remvoing hover effect from thumbnails once the project is open */
+$( ".designer-content:visible").mouseenter(function() {
+  $( ".thumb" ).css( "pointer-events", "none" );
+  
+});
+
