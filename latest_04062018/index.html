@@ -356,14 +356,57 @@
 	</div>
 </div>
 
-<div class="single-images">
+<!--<div class="single-images">
 	<img style="left: 30%; top: 15%;" class=thumb src="images/julia.jpg">
 	<img style="left: 300px; top: 29%;" class=thumb src="images/stefanie1.png">
 	<img style="right: 500px; top: 200px;" class=thumb src="images/therodina_stageofprecarity_4.png">
 	<img style="right: 30%; top: 500px;" class=thumb src="images/therodina_stageofprecarity_6.jpg">
 	<img style="left: 1300px; top: 9%;" class=thumb src="images/stefanie1.png">
 	<img style="left: 400px; bottom: 100px;" class=thumb src="images/TIWWJ%20ss%20_0003_Layer%204.jpg">
+</div> -->
+
+
+<div class="single-images"> <!-- k added right number of preview images + no inline styling -->
+	<img id="mateo-image" class="thumb random" src="images/final_projects/mateo_1.jpg">
+	<img id="julia-image" class="thumb random" src="images/final_projects/julia_3.jpg">
+	<img id="asja-image" class="thumb random" src="images/final_projects/asja_3.jpg">
+	<img id="anastasia-image" class="thumb random" src="images/final_projects/anastasia_3.jpg">
+	<img id="sherida-image" class="thumb random" src="images/final_projects/sherida_1.jpg">
+	<img id="heikki-image" class="thumb random" src="images/final_projects/heikki_1">
+	<img id="stefanie-image" class="thumb random" src="images/final_projects/stefanie_3.jpg">
+	<img id="juan-image" class="thumb random" src="images/final_projects/juan_2.jpg">
+	<img id="tereza-image" class="thumb random" src="images/final_projects/tereza_3.jpg">
 </div>
+
+
+<script type="text/javascript"> /*k added shuffle*/
+
+$(function () {
+    var parent = $(".single-images");
+    var divs = parent.children();
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+});
+
+$('.random').each(function(){
+	
+$(this).css({ 'top':randomXToY(0,10),
+	 'left': randomXToY(0,10)
+	});
+});
+ 
+// in case it's useful, my random function is just:
+ 
+function randomXToY(minVal,maxVal,floatVal){
+  var randVal = minVal+(Math.random()*(maxVal-minVal));
+  return typeof floatVal=='undefined'?Math.round(randVal):randVal.toFixed(floatVal);
+}
+
+
+</script>
+
+
 
 <script  src="js/index.js"></script>
 
