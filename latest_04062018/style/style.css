@@ -231,21 +231,25 @@ a {
   right: 18%;
   font-size: 0.8em; }
 
+
+.righttext, .lefttext {
+position: absolute;
+top: 30px;
+z-index: 3; 
+line-height: 1.2;
+}
+
 .lefttext {
   transition: all 0.2s;
-  position: absolute;
   left: 6px;
-  top: 30px;
   text-align: left;
-  z-index: 3 }
+ }
 
 
 .righttext {
-  position: absolute;
   right: 6px;
-  top: 30px;
   text-align: right;
-  z-index: 3; }
+}
 
 .single-images {
   z-index: 1;
