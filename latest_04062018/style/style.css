@@ -236,9 +236,8 @@ a {
   position: absolute;
   left: 6px;
   top: 30px;
-  text-align: left; }
-
-
+  text-align: left;
+  z-index: 3 }
 
 
 .righttext {
@@ -248,7 +247,9 @@ a {
   text-align: right;
   z-index: 3; }
 
-
+.single-images {
+  z-index: 1;
+}
 
 
 .logos {
