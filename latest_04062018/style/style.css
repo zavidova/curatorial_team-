@@ -246,21 +246,7 @@ a {
   z-index: 3; }
 
 
-  /*k added - getting thumbnail images under the text*/
 
-.left {
-  position: relative;
-  z-index: 20000;
-  width: 600px;
-  height: 200px;
-  left: 6px;
-  top: 30px;
-}
-
-
-
-
-  /*added stuff ends here*/
 
 .logos {
   position: absolute;
@@ -653,5 +639,8 @@ a {
 
 .night-color-body {
   background-color: #282700; }
+
+
+  
 
 /*# sourceMappingURL=style.css.map */
