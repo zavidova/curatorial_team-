@@ -65,13 +65,33 @@ a {
   color: initial;
   text-decoration: none; }
 
+/*k added*/
+.random {
+  position: relative;
+  margin: 20px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+/*.single-images {
+  z-index: 100;
+}*/
+
+/*added stuff ends here*/
+
 .thumb {
-  position: fixed;
-  width: 10%;
+  /*position: fixed;
+  width: 10%;*/ /*k commented out position & width*/
   z-index: 0;
   filter: blur(10px) invert(58%);
   mix-blend-mode: exclusion;
-  opacity: 0.7; }
+  opacity: 0.7;
+
+  /*k added*/
+  max-height: 250px;
+  width: auto;
+  /*added stuff ends here*/
+   }
 
 .thumb:hover {
   filter: blur(0px) invert(0%);
@@ -260,6 +280,16 @@ a {
 .sunset { background-color: #C0C0C0; }
 .night { background-color: #696969; }
 */
+
+/*k added - this style is for name when it's clicked, needs to be modified*/
+.invert {
+  filter: invert(90%);
+  background-color: white;
+  border-radius: 5px;
+}
+/*added stuff ends here*/
+
+
 .mobile {
   display: none; }
 
