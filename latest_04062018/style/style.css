@@ -247,18 +247,18 @@ a {
 
 
   /*k added - getting thumbnail images under the text*/
-/*.lefttext p, .righttext p {
-z-index: 20;
-background-color: red;
+
+.left {
+  position: relative;
+  z-index: 20000;
+  width: 600px;
+  height: 200px;
+  left: 6px;
+  top: 30px;
 }
 
-.single-images .thumb {
-z-index: 10;
-}
 
-.single-images .thumb:hover {
-z-index: 10;
-}
+
 
   /*added stuff ends here*/
 
