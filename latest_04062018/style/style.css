@@ -17,7 +17,10 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+/*k added z-index*/ 
+
+   }
 
 /*  */
 /*
@@ -73,9 +76,7 @@ a {
   display: inline-block;
 }
 
-/*.single-images {
-  z-index: 100;
-}*/
+
 
 /*added stuff ends here*/
 
@@ -243,6 +244,23 @@ a {
   top: 30px;
   text-align: right;
   z-index: 3; }
+
+
+  /*k added - getting thumbnail images under the text*/
+/*.lefttext p, .righttext p {
+z-index: 20;
+background-color: red;
+}
+
+.single-images .thumb {
+z-index: 10;
+}
+
+.single-images .thumb:hover {
+z-index: 10;
+}
+
+  /*added stuff ends here*/
 
 .logos {
   position: absolute;
