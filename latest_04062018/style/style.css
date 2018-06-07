@@ -74,7 +74,7 @@ html *
   font-style: normal; }
 @font-face {
   font-family: 'PMingLiU';
-  src: url("../assets/fonts/PMingLiU.woff") format("woff"), url("../assets/fonts/PMingLiU.ttf") format("truetype");
+  src: url("../assets/fonts/PMingLiU.woff") format("woff"), url("../assets/fonts/PMingLiU.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -733,18 +733,19 @@ a {
 
 /* evening from 8pm - 12pm */
 .evening-color-body {
-  background-color: orange;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/northernlights.jpg); }
-  .evening-color-body:after {
+  background-color: #303e18;
+  color: #4b0202;
+  text-shadow: 0 0 8px #b20404;
+  /*&:after {
     animation: grain 8s steps(10) infinite;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
     content: "";
     height: 300%;
     left: -50%;
     opacity: 0.3;
     position: fixed;
     top: -110%;
-    width: 300%; }
+    width: 300%;
+  }*/ }
 @keyframes grain {
   0%, 100% {
     transform: translate(0, 0); }
@@ -818,6 +819,7 @@ a {
   border-radius: 5px; }
 
 /* Mobile Styles */
+/* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 768px) {
   .button:active {
     outline: 0;

@@ -99,7 +99,8 @@ $(document).ready(function(){
 
     } else if (thehours >= 18 && thehours < 24) {
         $('body').addClass("evening-color-body");
-        $('.night-watermark').addClass("show-watermark");
+        $('.morning-watermark').addClass("show-during-time");
+        $('.mood').text( "Tired" );
 
 
     } else if (thehours >= 0 && thehours < 8) {
