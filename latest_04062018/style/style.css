@@ -511,7 +511,11 @@ line-height: 1.2;
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 678px) {
   
+.button:active
+{ outline: 0;
+background-color: yellow ;
 
+ }
 
 .paywall {
   background-color: none;
@@ -528,13 +532,83 @@ line-height: 1.2;
 }
  
 
-.maincontainer img {
-
+#tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle,  #bottomlefttitle, #bottomrighttitle, .righttext {
   display: none;
 }
 
+.toptitles, #centertitle {
+
+height: 11%;
+width: 100%;
+background-color: inherit; /*change*/
+top: 0;
+position: fixed;
+z-index: 200;
+}
 
 
+#centertitle {
+text-align: center;
+position: fixed;
+width: 100%;
+margin: 0 auto;
+left: 0;
+top: 6px;
+}
+
+.single-images img {
+  display: none;
+}
+
+.lefttext {
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 50%;
+}
+
+.maincontainer {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+.designer-content {
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+    width: 96%;
+    display: inline;
+    margin: 0 auto;
+    top: -17px;
+    z-index: 1;
+    position: relative;
+    overflow-y: scroll;
+    float: none;
+    text-align: left;
+    direction: rtl;
+  
+}
+
+.designer-content img {
+  width: 96%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  width: 96%;
+}
+.main-content {
+  overflow: hidden;
+  margin-bottom: 150px;
+
+}
+
+h2 {
+  margin-bottom: 20px;
+}
 
 
     }

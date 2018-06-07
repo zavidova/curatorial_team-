@@ -199,6 +199,17 @@ $(document).ready(function(){
   });
 });
 
+/*paywall function*/
+
+if ($(window).width() < 768) {
+ $(".trigger-paywall").css("pointer-events", "none");
+  };
+
+
+
+
+   
+
 
 
 function randomFromTo(from, to){
