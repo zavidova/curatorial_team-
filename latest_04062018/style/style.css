@@ -17,10 +17,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-/*k added z-index*/ 
-
-   }
+  vertical-align: baseline; }
 
 /*  */
 /*
@@ -68,31 +65,13 @@ a {
   color: initial;
   text-decoration: none; }
 
-/*k added*/
-.random {
-  position: relative;
-  margin: 20px;
-  padding-top: 20px;
-  display: inline-block;
-}
-
-
-
-/*added stuff ends here*/
-
 .thumb {
-  /*position: fixed;
-  width: 10%;*/ /*k commented out position & width*/
+  position: fixed;
+  width: 10%;
   z-index: 0;
   filter: blur(10px) invert(58%);
   mix-blend-mode: exclusion;
-  opacity: 0.7;
-
-  /*k added*/
-  max-height: 250px;
-  width: auto;
-  /*added stuff ends here*/
-   }
+  opacity: 0.7; }
 
 .thumb:hover {
   filter: blur(0px) invert(0%);
@@ -109,11 +88,7 @@ a {
 
 .title {
   font-style: italic;
-  font-size: 90%; 
-  z-index: 2;
-}
-
-
+  font-size: 90%; }
 
 .fullborder-top-left {
   position: fixed;
@@ -235,30 +210,19 @@ a {
   right: 18%;
   font-size: 0.8em; }
 
-
-.righttext, .lefttext {
-position: absolute;
-top: 30px;
-z-index: 3; 
-line-height: 1.2;
-}
-
 .lefttext {
   transition: all 0.2s;
+  position: absolute;
   left: 6px;
-  text-align: left;
- }
-
+  top: 30px;
+  text-align: left; }
 
 .righttext {
+  position: absolute;
   right: 6px;
+  top: 30px;
   text-align: right;
-}
-
-.single-images {
-  z-index: 1;
-}
-
+  z-index: 3; }
 
 .logos {
   position: absolute;
@@ -296,16 +260,6 @@ line-height: 1.2;
 .sunset { background-color: #C0C0C0; }
 .night { background-color: #696969; }
 */
-
-/*k added - this style is for name when it's clicked, needs to be modified*/
-.invert {
-  filter: invert(90%);
-  background-color: white;
-  border-radius: 5px;
-}
-/*added stuff ends here*/
-
-
 .mobile {
   display: none; }
 
@@ -509,109 +463,17 @@ line-height: 1.2;
   max-width: 200px; }
 
 /* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 678px) {
-  
-.button:active
-{ outline: 0;
-background-color: yellow ;
+@media screen and (max-width: 992px) {
+  .desktop {
+    display: none; }
 
- }
-
-.paywall {
-  background-color: none;
-  padding-top: 2rem;
-}
-
-
-.paywall .paywall-contents {
-
-  width: 95%;
-    margin: 3vh auto;
-    border: 3px solid #fbff00;
-    max-height: 80vh; 
-}
- 
-
-#tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle,  #bottomlefttitle, #bottomrighttitle, .righttext {
-  display: none;
-}
-
-.toptitles, #centertitle {
-
-height: 11%;
-width: 100%;
-background-color: inherit; /*change*/
-top: 0;
-position: fixed;
-z-index: 200;
-}
-
-
-#centertitle {
-text-align: center;
-position: fixed;
-width: 100%;
-margin: 0 auto;
-left: 0;
-top: 6px;
-}
-
-.single-images img {
-  display: none;
-}
-
-.lefttext {
-  margin-top: 20px;
-  position: relative;
-  padding-bottom: 50%;
-}
-
-.maincontainer {
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-
-.designer-content {
-    visibility: visible;
-    opacity: 1;
-    transition: none;
-    width: 96%;
+  .mobile {
     display: inline;
-    margin: 0 auto;
-    top: -17px;
-    z-index: 1;
-    position: relative;
-    overflow-y: scroll;
-    float: none;
-    text-align: left;
-    direction: rtl;
-  
-}
-
-.designer-content img {
-  width: 96%;
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.main-content p {
-  width: 96%;
-}
-.main-content {
-  overflow: hidden;
-  margin-bottom: 150px;
-
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-
-    }
+    position: fixed;
+    left: 120px;
+    top: 120px;
+    color: white;
+    font-size: 8rem; } }
 /* On screens that are 600px or less, set the background color to olive */
 @media print {
   .desktop {
@@ -743,8 +605,5 @@ h2 {
 
 .night-color-body {
   background-color: #282700; }
-
-
-  
 
 /*# sourceMappingURL=style.css.map */
