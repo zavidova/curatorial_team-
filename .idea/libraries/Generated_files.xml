@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/latest_04062018/js/index.min.js" />
+        <item url="file://$PROJECT_DIR$/latest_04062018/js/timer.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/latest_04062018/js/index.min.js" />
+      <root url="file://$PROJECT_DIR$/latest_04062018/js/timer.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
