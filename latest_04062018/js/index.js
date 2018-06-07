@@ -54,7 +54,7 @@ $(document).ready(function(){
   });
 
   $("#anastasia").mouseover(function() {
-  $( "#centertitle" ).text( "НебесныеУслуги" );
+  $( "#centertitle" ).text( "НебесныеСлужбы" );
 });
 
 $("#julia").mouseover(function() {
@@ -91,6 +91,19 @@ $(document).ready(function(){
       $('#righttext a').removeClass("active-designer");
     }
   });
+
+
+
+    $(".toptitles , .bottom-paremeters").click(function() {
+      $('#righttext a').removeClass("active-designer");
+      $('.designer-content').removeClass("show-content");
+      $('.lefttext').removeClass("hide-content");
+      $('#righttext a').removeClass("active-designer");
+
+  
+  });
+
+
 
   $('#mateo').click(function(){
     $('#righttext a').removeClass("active-designer");

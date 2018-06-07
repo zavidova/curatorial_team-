@@ -109,7 +109,11 @@ a {
 
 .title {
   font-style: italic;
-  font-size: 90%; }
+  font-size: 90%; 
+  z-index: 2;
+}
+
+
 
 .fullborder-top-left {
   position: fixed;
