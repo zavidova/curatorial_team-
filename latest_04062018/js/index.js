@@ -113,14 +113,6 @@ $(document).ready(function(){
     $('.lefttext').addClass("hide-content");
   });
 
-  /* k added - this script is to connect thumbnail image with the name */
-
-$('#mateo-image').click(function(){
-$('#mateo').addClass("invert");
-  });
-
-
-
   $('#julia').click(function(){
     $('#righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
