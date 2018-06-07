@@ -80,36 +80,49 @@ $("#julia").mouseover(function() {
 
 });
 
+if ($(window).width() < 768) {
+  $(".trigger-paywall").css("pointer-events", "none");
+};
+
+
+
+
 
 $(document).ready(function(){
 
   $(document).keyup(function(e) {
     if (e.keyCode == 27) {
-      $('#righttext a').removeClass("active-designer");
+      $( '.thumb' ).removeClass( "pointer-events-off" );
+      $('.righttext a').removeClass("active-designer");
       $('.designer-content').removeClass("show-content");
       $('.lefttext').removeClass("hide-content");
       $('#righttext a').removeClass("active-designer");
     }
   });
 
-  $('#mateo').click(function(){
+  $(".toptitles, .bottom-paremeters").click(function() {
+    $( '.thumb' ).removeClass( "pointer-events-off" );
+    $('.righttext a').removeClass("active-designer");
+    $('.designer-content').removeClass("show-content");
+    $('.lefttext').removeClass("hide-content");
     $('#righttext a').removeClass("active-designer");
+  });
+
+
+
+  $('#mateo').click(function(){
+    $( '.thumb' ).addClass( "pointer-events-off" );
+    $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.mateo-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  /* k added - this script is to connect thumbnail image with the name */
-
-$('#mateo-image').click(function(){
-$('#mateo').addClass("invert");
-  });
-
-
 
   $('#julia').click(function(){
-    $('#righttext a').removeClass("active-designer");
+    $( '.thumb' ).addClass( "pointer-events-off" );
+    $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.julia-content').addClass("show-content");
@@ -117,7 +130,8 @@ $('#mateo').addClass("invert");
   });
 
   $('#anastasia').click(function(){
-    $('#righttext a').removeClass("active-designer");
+    $( '.thumb' ).addClass( "pointer-events-off" );
+    $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.anastasia-content').addClass("show-content");
@@ -125,7 +139,8 @@ $('#mateo').addClass("invert");
   });
 
   $('#asja').click(function(){
-    $('#righttext a').removeClass("active-designer");
+    $( '.thumb' ).addClass( "pointer-events-off" );
+    $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.asja-content').addClass("show-content");
@@ -134,6 +149,7 @@ $('#mateo').addClass("invert");
 
 
   $('#sherida').click(function(){
+    $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
@@ -142,6 +158,7 @@ $('#mateo').addClass("invert");
   });
 
   $('#stefanie').click(function(){
+    $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
@@ -150,6 +167,7 @@ $('#mateo').addClass("invert");
   });
 
   $('#heikki').click(function(){
+    $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
@@ -158,6 +176,7 @@ $('#mateo').addClass("invert");
   });
 
   $('#juan').click(function(){
+    $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
@@ -166,6 +185,7 @@ $('#mateo').addClass("invert");
   });
 
   $('#tereza').click(function(){
+    $( '.thumb' ).addClass( "pointer-events-off" );
     $('#righttext a').removeClass("active-designer");
     $(this).addClass("active-designer");
     $('.designer-content').removeClass("show-content");
@@ -348,10 +368,4 @@ $(document).ready(function(){
   });
 });
 
-
-/* K added remvoing hover effect from thumbnails once the project is open */
-$( ".designer-content:visible").mouseenter(function() {
-  $( ".thumb" ).css( "pointer-events", "none" );
-  
-});
 
