@@ -90,6 +90,24 @@ a {
   color: inherit;
   text-decoration: none; }
 
+<<<<<<< HEAD
+/*k added*/
+.random {
+  position: relative;
+  margin: 20px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+p.map {
+  visibility: none;
+  display: none;
+
+}
+/*added stuff ends here*/
+
+=======
+>>>>>>> a068be86cce1d54790c7882f442d040702b1c092
 .thumb {
   position: fixed;
   width: 10%;
@@ -115,7 +133,18 @@ a {
 
 .title {
   font-style: italic;
+<<<<<<< HEAD
+  font-size: 90%; 
+  z-index: 2;
+}
+
+#centertitle-mobile {
+  display: none;
+}
+
+=======
   font-size: 90%; }
+>>>>>>> a068be86cce1d54790c7882f442d040702b1c092
 
 .fullborder-top-left {
   position: fixed;
@@ -488,10 +517,111 @@ a {
 .project img {
   max-width: 200px; }
 
+
+
+
 /* On screens that are 992px or less, set the background color to blue */
+
+@media screen and (max-width: 678px) {
+
+
+p.map {
+  display: inline;
+  visibility: visible;
+  font-size: 1.3rem;
+}
+  
+.button:active
+{ outline: 0;
+background-color: yellow ;
+
+ }
+
+.paywall {
+  background-color: none;
+  padding-top: 2rem;
+}
+
+
+.paywall .paywall-contents {
+
+  width: 95%;
+    margin: 3vh auto;
+    border: 3px solid #fbff00;
+    max-height: 80vh; 
+}
+ 
+
+#tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle,  #bottomlefttitle, #bottomrighttitle, .righttext {
+  display: none;
+}
+
+.toptitles{
+height: 1.2em;
+}
+
+.morning-color-body .toptitles {
+background-color: yellow;
+}
+
+.afternoon-color-body .toptitles {
+background-color: inherit; /*check!*/
+}
+.evening-color-body .toptitles {
+background-color: orange;
+}
+
+.night-color-body .toptitles {
+background-color: #282700;
+}
+
+
+.toptitles, #centertitle-mobile {
+
+width: 100%;
+font-size: 0.9em;
+
+top: 0;
+position: fixed;
+z-index: 200;
+}
+
+#centertitle {
+  display: none;
+}
+
+#centertitle-mobile {
+text-align: center;
+margin: 0 auto;
+left: 0;
+top: 2px;
+display: inline;
+
+}
+
+
+
+.single-images img {
+  display: none;
+}
+
+.lefttext {
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 50%;
+}
+
+.maincontainer {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
 @media screen and (max-width: 992px) {
   .desktop {
     display: none; }
+
 
   .mobile {
     display: inline;
