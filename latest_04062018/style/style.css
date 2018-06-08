@@ -78,36 +78,18 @@ html *
   font-weight: normal;
   font-style: normal; }
 body {
-  font-size: 40px;
+  font-size: 2.2rem;
   background-color: #ecece7;
   font-family: 'PMingLiU', Times New Roman, Serif;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03rem;
   height: 100vh;
-  line-height: 110%;
+  line-height: 2.4rem;
   overflow: hidden; }
 
 a {
   color: inherit;
   text-decoration: none; }
 
-<<<<<<< HEAD
-/*k added*/
-.random {
-  position: relative;
-  margin: 20px;
-  padding-top: 20px;
-  display: inline-block;
-}
-
-p.map {
-  visibility: none;
-  display: none;
-
-}
-/*added stuff ends here*/
-
-=======
->>>>>>> a068be86cce1d54790c7882f442d040702b1c092
 .thumb {
   position: fixed;
   width: 10%;
@@ -133,18 +115,7 @@ p.map {
 
 .title {
   font-style: italic;
-<<<<<<< HEAD
-  font-size: 90%; 
-  z-index: 2;
-}
-
-#centertitle-mobile {
-  display: none;
-}
-
-=======
-  font-size: 90%; }
->>>>>>> a068be86cce1d54790c7882f442d040702b1c092
+  font-size: 80%; }
 
 .fullborder-top-left {
   position: fixed;
@@ -235,7 +206,7 @@ p.map {
   margin-left: 20px;
   margin-right: 20px;
   top: 20px;
-  height: 85vh;
+  height: 88vh;
   border-bottom: 2px solid #888; }
 
 #lefttitle {
@@ -269,7 +240,6 @@ p.map {
 .lefttext {
   transition: all 0.2s;
   position: absolute;
-  left: 24px;
   top: 40px;
   text-align: left; }
   .lefttext .skew {
@@ -281,8 +251,9 @@ p.map {
 
 .righttext {
   position: absolute;
-  right: 24px;
+  right: 0;
   top: 40px;
+  z-index: 50;
   text-align: right; }
 
 .logos {
@@ -297,7 +268,7 @@ p.map {
   display: flex;
   width: 100vw;
   /* padding: 0 2%; */
-  top: 87vh;
+  top: 90vh;
   position: fixed;
   font-family: Herculanum, Times, Serif;
   font-size: 1vw; }
@@ -347,12 +318,25 @@ p.map {
     height: 93vh;
     overflow: scroll;
     background-color: #fff; }
+    .paywall .paywall-contents .paywall-inner-contents {
+      margin-top: 3vh;
+      margin: 30px;
+      border: 1px solid green;
+      height: 70vh;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll; }
     .paywall .paywall-contents p {
       color: black;
-      font-size: 0.6em;
       line-height: normal;
-      padding: 20px;
+      letter-spacing: normal;
+      padding: 10px 30px;
       text-shadow: 0 1px #ddd; }
+    .paywall .paywall-contents .credits {
+      margin-top: 3vh;
+      font-size: 80%;
+      line-height: normal; }
+      .paywall .paywall-contents .credits p {
+        padding-top: 0; }
     .paywall .paywall-contents .button {
       text-align: center;
       margin: 1em auto;
@@ -362,12 +346,18 @@ p.map {
       line-height: 20px;
       height: 20px;
       border: 1px solid #000;
-      font-size: 0.8em;
+      font-size: 0.6em;
       padding: 0.5em;
       border-radius: 1px;
       font-family: helvetica ,sans-serif;
       font-weight: 100;
       bottom: 0;
+      bottom: 3vh;
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       cursor: pointer; }
 
 .hide-paywall {
@@ -455,7 +445,7 @@ p.map {
   font-size: 1em;
   width: 96%;
   padding: 40px 1vw 0;
-  color: #401508;
+  color: #250900;
   text-shadow: 0 0 1px #828282;
   /* border: 11px solid; */
   margin: 0 auto;
@@ -465,7 +455,7 @@ p.map {
   /* left: 30vw; */
   top: -17px;
   z-index: 1;
-  height: calc(85vh - 22px);
+  height: calc(88vh - 22px);
   /* background-color: #e5e5e5; */
   position: absolute;
   overflow: scroll;
@@ -517,111 +507,10 @@ p.map {
 .project img {
   max-width: 200px; }
 
-
-
-
 /* On screens that are 992px or less, set the background color to blue */
-
-@media screen and (max-width: 678px) {
-
-
-p.map {
-  display: inline;
-  visibility: visible;
-  font-size: 1.3rem;
-}
-  
-.button:active
-{ outline: 0;
-background-color: yellow ;
-
- }
-
-.paywall {
-  background-color: none;
-  padding-top: 2rem;
-}
-
-
-.paywall .paywall-contents {
-
-  width: 95%;
-    margin: 3vh auto;
-    border: 3px solid #fbff00;
-    max-height: 80vh; 
-}
- 
-
-#tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle,  #bottomlefttitle, #bottomrighttitle, .righttext {
-  display: none;
-}
-
-.toptitles{
-height: 1.2em;
-}
-
-.morning-color-body .toptitles {
-background-color: yellow;
-}
-
-.afternoon-color-body .toptitles {
-background-color: inherit; /*check!*/
-}
-.evening-color-body .toptitles {
-background-color: orange;
-}
-
-.night-color-body .toptitles {
-background-color: #282700;
-}
-
-
-.toptitles, #centertitle-mobile {
-
-width: 100%;
-font-size: 0.9em;
-
-top: 0;
-position: fixed;
-z-index: 200;
-}
-
-#centertitle {
-  display: none;
-}
-
-#centertitle-mobile {
-text-align: center;
-margin: 0 auto;
-left: 0;
-top: 2px;
-display: inline;
-
-}
-
-
-
-.single-images img {
-  display: none;
-}
-
-.lefttext {
-  margin-top: 20px;
-  position: relative;
-  padding-bottom: 50%;
-}
-
-.maincontainer {
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-
 @media screen and (max-width: 992px) {
   .desktop {
     display: none; }
-
 
   .mobile {
     display: inline;
@@ -721,6 +610,14 @@ display: inline;
     right: -8%; } }
 */
 /* ornaments */
+.toptitles {
+  z-index: 100;
+  position: fixed; }
+  .toptitles .left-replace {
+    font-style: italic !important; }
+  .toptitles span {
+    font-style: normal; }
+
 #tail {
   position: absolute;
   background: green;
@@ -849,8 +746,8 @@ display: inline;
 
 /* from 9am -12am working */
 /* substate */
-.afternoon-color-body {
-  background-color: inherit; }
+.afternoon-body {
+  background-color: #fff; }
 
 /* working from 12pm till 8pm */
 .afternoon-nervous-body {
@@ -862,7 +759,7 @@ display: inline;
     animation-timing-function: linear; }
 
 /* evening from 8pm - 12pm */
-.evening-color-body {
+.evening-body {
   background-color: #303e18;
   color: #4b0202;
   text-shadow: 0 0 8px #b20404;
@@ -905,20 +802,20 @@ display: inline;
     border-radius: 0; }
 
 /* night from 12pm till 9am */
-.night-color-body {
+.night-body {
   background: #000;
   color: #fff; }
-  .night-color-body .designer-content {
+  .night-body .designer-content {
     color: #dedede !important;
     text-shadow: 1px 0px #ddd !important; }
-  .night-color-body .lefttext {
+  .night-body .lefttext {
     pointer-events: none; }
-  .night-color-body .thumb {
+  .night-body .thumb {
     mix-blend-mode: color-burn;
     filter: blur(12px) invert(60%); }
-    .night-color-body .thumb:hover {
+    .night-body .thumb:hover {
       filter: invert(0); }
-  .night-color-body .timer, .night-color-body #clock, .night-color-body .location, .night-color-body .position, .night-color-body .counter {
+  .night-body .timer, .night-body #clock, .night-body .location, .night-body .position, .night-body .counter {
     opacity: 0; }
 
 .night-watermark, .night-logos {
@@ -948,9 +845,15 @@ display: inline;
   background-color: white;
   border-radius: 5px; }
 
+#centertitle-mobile {
+  display: none; }
+
 /* Mobile Styles */
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 768px) {
+  #centertitle-mobile {
+    display: block !important; }
+
   .button:active {
     outline: 0;
     background-color: yellow; }
@@ -965,7 +868,7 @@ display: inline;
     border: 3px solid #fbff00;
     max-height: 80vh; }
 
-  #tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle, #bottomlefttitle, #bottomrighttitle, .righttext {
+  #tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle, #bottomlefttitle, #bottomrighttitle, .righttext, #centertitle {
     display: none; }
 
   .toptitles, #centertitle {
@@ -1027,6 +930,6 @@ display: inline;
     margin-bottom: 150px; }
 
   h2 {
-    margin-bottom: 20px; } }
+    margin-bottom: 0; } }
 
 /*# sourceMappingURL=style.css.map */

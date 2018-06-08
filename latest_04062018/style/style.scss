@@ -81,12 +81,12 @@ html *
 
 
 body{
-  font-size: 40px;
+  font-size: 2.2rem;
   background-color: #ecece7;
   font-family: 'PMingLiU', Times New Roman, Serif;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03rem;
   height: 100vh;
-  line-height: 110%;
+  line-height: 2.4rem;
   overflow: hidden;
 
 }
@@ -128,7 +128,7 @@ a{
 
 .title{
   font-style: italic;
-  font-size: 90%;
+  font-size: 80%;
 }
 
 
@@ -226,7 +226,7 @@ a{
   margin-left: 20px;
   margin-right: 20px;
   top: 20px;
-  height: 85vh;
+  height: 88vh;
   border-bottom: 2px solid #888;
 
 }
@@ -267,7 +267,6 @@ a{
 .lefttext{
   transition: all 0.2s;
   position: absolute;
-  left: 24px;
   top: 40px;
   text-align: left;
 
@@ -280,10 +279,12 @@ a{
   }
 }
 
+
 .righttext{
   position: absolute;
-  right: 24px;
+  right: 0;
   top: 40px;
+  z-index: 50;
   text-align: right;
 }
 
@@ -302,7 +303,7 @@ a{
   display: flex;
   width: 100vw;
   /* padding: 0 2%; */
-  top: 87vh;
+  top: 90vh;
   position: fixed;
   font-family: Herculanum, Times, Serif;
   font-size: 1vw;
@@ -369,12 +370,34 @@ a{
     overflow: scroll;
     background-color: #fff;
 
+    .paywall-inner-contents {
+      margin-top: 3vh;
+      margin: 30px;
+      border: 1px solid green;
+      height: 70vh;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+
+
+    }
+
     p {
       color: black;
-      font-size: 0.6em;
       line-height: normal;
-      padding: 20px;
+      letter-spacing: normal;
+      padding: 10px 30px;
       text-shadow: 0 1px #ddd;
+
+    }
+
+    .credits {
+      margin-top: 3vh;
+      font-size: 80%;
+      line-height: normal;
+
+      p {
+        padding-top: 0;
+      }
 
     }
 
@@ -388,12 +411,18 @@ a{
       line-height: 20px;
       height: 20px;
       border: 1px solid #000;
-      font-size: 0.8em;
+      font-size: 0.6em;
       padding: 0.5em;
       border-radius: 1px;
       font-family: helvetica ,sans-serif;
       font-weight: 100;
       bottom: 0;
+      bottom: 3vh;
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       cursor: pointer;
     }
   }
@@ -520,7 +549,7 @@ a{
   font-size: 1em;
   width: 96%;
   padding: 40px 1vw 0;
-  color: #401508;
+  color: #250900;
   text-shadow: 0 0 1px #828282;
   /* border: 11px solid; */
   margin: 0 auto;
@@ -530,7 +559,7 @@ a{
   /* left: 30vw; */
   top: -17px;
   z-index: 1;
-  height: calc(85vh - 22px);
+  height: calc(88vh - 22px);
   /* background-color: #e5e5e5; */
   position: absolute;
   overflow: scroll;
@@ -718,6 +747,19 @@ a{
 
 /* ornaments */
 
+.toptitles {
+  z-index: 100;
+  position: fixed;
+
+  .left-replace {
+    font-style: italic !important;
+  }
+
+  span {
+    font-style: normal;
+  }
+}
+
 #tail {
   position: absolute;
   background: green;
@@ -870,8 +912,8 @@ a{
 /* from 9am -12am working */
 /* substate */
 
-.afternoon-color-body {
-  background-color: inherit;
+.afternoon-body {
+  background-color: #fff;
 }
 
 
@@ -893,7 +935,7 @@ a{
 
 /* evening from 8pm - 12pm */
 
-.evening-color-body {
+.evening-body {
   background-color: #303e18;
   color: #4b0202;
   text-shadow: 0 0 8px #b20404;
@@ -937,7 +979,7 @@ a{
 
 /* night from 12pm till 9am */
 
-.night-color-body {
+.night-body {
   background: #000;
   color: #fff;
 
@@ -1009,45 +1051,45 @@ a{
 
 
 
+
+
+#centertitle-mobile {
+  display: none;
+}
+
 /* Mobile Styles */
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 768px) {
 
-  .button:active
-  { outline: 0;
-    background-color: yellow ;
-
+  #centertitle-mobile {
+    display: block !important;
   }
+
+  .button:active {
+    outline: 0;
+    background-color: yellow; }
 
   .paywall {
     background-color: none;
-    padding-top: 2rem;
-  }
-
+    padding-top: 2rem; }
 
   .paywall .paywall-contents {
-
     width: 95%;
     margin: 3vh auto;
     border: 3px solid #fbff00;
-    max-height: 80vh;
-  }
+    max-height: 80vh; }
 
-
-  #tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle,  #bottomlefttitle, #bottomrighttitle, .righttext {
-    display: none;
-  }
+  #tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle, #bottomlefttitle, #bottomrighttitle, .righttext, #centertitle {
+    display: none; }
 
   .toptitles, #centertitle {
-
     height: 11%;
     width: 100%;
-    background-color: inherit; /*change*/
+    background-color: inherit;
+    /*change*/
     top: 0;
     position: fixed;
-    z-index: 200;
-  }
-
+    z-index: 200; }
 
   #centertitle {
     text-align: center;
@@ -1055,25 +1097,20 @@ a{
     width: 100%;
     margin: 0 auto;
     left: 0;
-    top: 6px;
-  }
+    top: 6px; }
 
   .single-images img {
-    display: none;
-  }
+    display: none; }
 
   .lefttext {
     margin-top: 20px;
     position: relative;
-    padding-bottom: 50%;
-  }
+    padding-bottom: 50%; }
 
   .maincontainer {
     height: 100%;
     overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
+    overflow-x: hidden; }
 
   .designer-content {
     visibility: visible;
@@ -1088,32 +1125,23 @@ a{
     overflow-y: scroll;
     float: none;
     text-align: left;
-    direction: rtl;
-
-  }
+    direction: rtl; }
 
   .designer-content img {
     width: 96%;
     height: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 20px; }
 
   .main-content p {
-    width: 96%;
-  }
+    width: 96%; }
+
   .main-content {
     overflow: hidden;
-    margin-bottom: 150px;
-
-  }
+    margin-bottom: 150px; }
 
   h2 {
-    margin-bottom: 20px;
-  }
-
-
-}
+    margin-bottom: 0; } }
 
 
 

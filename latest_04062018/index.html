@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CelestialServices</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="js/simple-scrollbar.css">
 	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" ></script>
+	<script src='js/simple-scrollbar.min.js'></script>
 	<script type="text/javascript" src="js/timer.js"></script>
 	<!--<meta http-equiv="refresh" content="30"/> this refreshes the page every 30 seconds-->
 </head>
@@ -37,15 +39,37 @@
 <?php require("vcounter.php"); ?>
 <div class="paywall">
 	<div class="paywall-contents">
+		<div ss-container class="paywall-inner-contents">
 		<?php echo $info; ?>
 
-		<p>Lorem ipsum dolor amet lumbersexual vape art party chia twee four loko master cleanse, YOLO austin trust fund. Subway tile umami intelligentsia mlkshk schlitz jean shorts twee succulents. Man bun synth affogato bicycle rights. Paleo PBR&B meditation before they sold out taxidermy. Ramps brooklyn authentic, copper mug yuccie farm-to-table sustainable irony godard viral meggings. Lomo vaporware godard four loko synth vexillologist biodiesel lo-fi.</p>
+			<p>Welcome to <i style="font-style:italic;">Celestial</i>Services.</p>
 
-		<p>Lomo squid hoodie freegan shoreditch, woke bicycle rights neutra mumblecore cold-pressed deep v roof party flannel. Prism kitsch lumbersexual locavore biodiesel thundercats. Ennui put a bird on it roof party glossier, brunch iceland irony cronut health goth vegan. Sartorial tote bag austin, literally banh mi shoreditch umami taxidermy squid vape deep v ethical taiyaki intelligentsia. Tattooed hella snackwave lomo lyft squid YOLO. Lo-fi sustainable post-ironic literally art party cold-pressed, single-origin coffee deep v affogato echo park bitters. Occupy small batch aesthetic jean shorts pug meditation.</p>
+			<p><i style="font-style:italic;">Celestial</i>Services brings together the 2018 Graduation works of the Design Department.</p>
+		<p>Embracing subjective states, moods and alternate ways of encountering, the works inhabit both a daytime exhibition context and a nocturnal life during De School’s nightclub hours. Over these days and nights and throughout the different spaces of De School, an event programme of presentations, readings, radio and performance will further explore the potential for alternative contextual meanings.</p>
 
-		<div class="button">OK I Agree</div>
+		<p>Works by:</br>
+		Mateo Broillet, Júlia Carvalho de Aguiar, Asja Keeman, Anastasia Kubrak, Sherida Kuffour, Heikki Lotvonen‭, Stefanie Luchtenberg‭, Juan Pablo Mejía‭, Tereza Ruller‭ </p>
+
+		<div class="credits">
+		<p>Graduation Jury<br>
+
+		Gabrielle Kenedy, Michael Tedja, Rana Ghavami, Anja Groten, Agata Jaworska, Rob Schröder, Daniel van der Velden, Rogier Klomp</p>
+
+		<p>Curatorial Team<br>
+		Agata Jaworska, Lucie de Bréchard, Sascha Krischock, Alexander Walker, Karina Zavidova</p>
+
+			<p>Text Editing<br>
+		Rana Ghavami, Agata Jaworska</p>
+
+		<p>Thanks<br>
+		Charlotte Corstanje, Looy and Tijmen, Femke Dekker, Anne van de Weijden, Sandberg Instituut MediaLab</p>
+			</div>
 
 
+
+		<div class="button">Agree and Proceed</div>
+
+</div>
 	</div>
 
 
@@ -68,37 +92,17 @@
 <div class="maincontainer">
 
 	<div class="toptitles" style="cursor:crosshair;"> <!--K added clickable area for reload, problem: it also calls for the popup :(  value = "Refresh" onclick="history.go(0)"-->
-		<div id="centertitle" class=title>CelestialServices</div>
-
-		<div id="centertitle-mobile" class="title"><marquee>ServicesCélestes HemelseDiensten CelestialServices HemelseDiensten НебесныеСлужбы ServiçosCelestes TaivasPalvelut HimmlischeDienste ServiciosCelestiales NebeskéSlužby</marquee></div>
-
-
-		<div id="lefttitle" class=title>ServiçosCelestes</div>
-		<div id="righttitle" class=title>ServiçosCelestes</div>
-		<div id="bottomlefttitle" class=title>ServiçosCelestes</div>
-		<div id="bottomrighttitle" class=title>CelestialServices</div>
+		<div id="centertitle" class=title><span class="left-replace">Celestial</span><span class="right-replace">Services</span></div>
+		<div id="centertitle-mobile" class="title"><marquee>Services<span>Célestes</span> Hemelse<span>Diensten</span> Celestial<span>Services</span> Hemelse<span>Diensten</span> Небесные<span>Службы</span> Serviços<span>Celestes Taivas<span>Palvelut</span> Himmlische<span>Dienste</span> Servicios<span>Celestiales</span> Nebeské<span>Služby</span></marquee></div>
+		<div id="lefttitle" class=title>Serviços<span>Celestes</span></div>
+		<div id="righttitle" class=title>Serviços<span>Celestes</span></div>
+		<div id="bottomlefttitle" class=title>Serviços<span>Celestes</span></div>
+		<div id="bottomrighttitle" class=title>Celestial<span>Services</span></div>
 
 	</div>
 
-
-
-<div class="single-images">
-
-	<div class="lefttext">
-		<p class="trigger-paywall">Sandberg Instituut<br>
-			Design Department<br>
-			Graduation 2018<br>
-			<br>
-		</p>
-		<p>15th—18th June<br>
-			De School<br>
-			Doctor Jan van Breemenstraat 1<br>
-			1056 AB Amsterdam</p><br> <p class="map"><a href="https://goo.gl/maps/svmx3HzQAPv" target="_blank" style="text-decoration: underline;">How to get there</a></p>
-		</p>
-	</div>
 
 	<div class="single-images">
-
 
 		<div class="only-images">
 			<img id="mateo-image" class="thumb random day-thumb" src="images/final_projects/mateo_1.jpg">
@@ -117,18 +121,6 @@
 			<img  class="thumb random night-thumb" src="images/nightmode_images/movie.jpg">
 			<img class="thumb random night-thumb" src="images/nightmode_images/hiking.jpg">
 			<img  class="thumb random night-thumb" src="images/nightmode_images/latte.jpg">
-
-
-	<div class="righttext">
-		<a id="mateo" href=#>Mateo Broillet</a><br>
-		<a id="julia" href=#>Jùlia Carvalho de Aguiar</a><br>
-		<a id="asja" href=#>Asja Keeman</a><br>
-		<a id="anastasia" href=#>Anastasia Kubrak</a><br>
-		<a id="sherida" href=#>Sherida Kuffour</a><br>
-		<a id="heikki" href=#>Heikki Lotvonen</a><br>
-		<a id="stefanie" href=#>Stefanie Luchtenberg</a><br>
-		<a id="juan" href=#>Juan Pablo Mejia</a><br>
-		<a id="tereza" href=#>Tereza Ruller</a><br>
 
 		</div>
 		<div class="lefttext">
@@ -315,8 +307,6 @@
 
 <!------>
 
-
-<img style="position: fixed;left: 20px;bottom: 36px;" src="images/mood.png" id="tinylogo">
 <div class="logos"><img src="assets/logos.svg"></div>
 <div class="logos morning-logos"><img src="assets/logos/logos_transparent.svg"></div>
 <div class="logos night-logos"><img src="assets/logos/logos_transparent_night.svg"></div>
@@ -324,7 +314,7 @@
 <div class="bottom-paremeters" style="cursor: crosshair;"> <!--K added clickable area for reload, same issues as the top one value = "Refresh" onclick="history.go(0)"  -->
 
 	<div>Mood: <span class="mood">Moody</span>
-		</div>
+	</div>
 
 
 	<div class="timer">
@@ -346,34 +336,34 @@
 	</div>
 
 	<div class="counter">
-	<SCRIPT>
-           expireDate = new Date
-           expireDate.setMonth(expireDate.getMonth()+6)
-           jcount = eval(cookieVal("jaafarCounter"))
-           jcount++
-           document.cookie = "jaafarCounter="+jcount+";expires=" + expireDate.toGMTString()
+		<SCRIPT>
+			expireDate = new Date
+			expireDate.setMonth(expireDate.getMonth()+6)
+			jcount = eval(cookieVal("jaafarCounter"))
+			jcount++
+			document.cookie = "jaafarCounter="+jcount+";expires=" + expireDate.toGMTString()
 
-           function cookieVal(cookieName) {
-               thisCookie = document.cookie.split("; ")
-               for (i=0; i<thisCookie.length; i++){
-                   if (cookieName == thisCookie[i].split("=")[0]){
-                       return thisCookie[i].split("=")[1]
-                   }
-               }
-               return 0
-           }
+			function cookieVal(cookieName) {
+				thisCookie = document.cookie.split("; ")
+				for (i=0; i<thisCookie.length; i++){
+					if (cookieName == thisCookie[i].split("=")[0]){
+						return thisCookie[i].split("=")[1]
+					}
+				}
+				return 0
+			}
 
-           function page_counter(){
-               for (y=0;y<(jcount.toString().length);y++)
-                   document.write('<span class="counter">'+jcount.toString().charAt(y)+'</span>')
-           }
-	</SCRIPT>
+			function page_counter(){
+				for (y=0;y<(jcount.toString().length);y++)
+					document.write('<span class="counter">'+jcount.toString().charAt(y)+'</span>')
+			}
+		</SCRIPT>
 
 		<span>Hits:</span>
-	<SCRIPT>
-           page_counter(jcount);
-	</SCRIPT>
-</div>
+		<SCRIPT>
+			page_counter(jcount);
+		</SCRIPT>
+	</div>
 
 	<div class="position">
 		X<span id="posX">000</span>/Y<span id="posY">000</span>
@@ -395,25 +385,25 @@
 <script type="text/javascript"> /*k added shuffle*/
 
 $(function () {
-    var parent = $(".single-images .only-images");
-    var divs = $(".single-images .only-images img");
-    while (divs.length) {
-        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-    }
+	var parent = $(".single-images .only-images");
+	var divs = $(".single-images .only-images img");
+	while (divs.length) {
+		parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+	}
 });
 
 $('.random').each(function(){
 
-$(this).css({ 'top':randomXToY(0,10),
-	 'left': randomXToY(0,10)
+	$(this).css({ 'top':randomXToY(0,10),
+		'left': randomXToY(0,10)
 	});
 });
 
 // in case it's useful, my random function is just:
 
 function randomXToY(minVal,maxVal,floatVal){
-  var randVal = minVal+(Math.random()*(maxVal-minVal));
-  return typeof floatVal=='undefined'?Math.round(randVal):randVal.toFixed(floatVal);
+	var randVal = minVal+(Math.random()*(maxVal-minVal));
+	return typeof floatVal=='undefined'?Math.round(randVal):randVal.toFixed(floatVal);
 }
 
 

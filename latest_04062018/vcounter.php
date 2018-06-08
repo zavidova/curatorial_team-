@@ -155,7 +155,7 @@ $log_file = dirname(__FILE__) . '/' . $lf_name;
  $toWrite = $allHits . ";" . $uniqueHits . ";" . $IPs;
  }
  //Info to show.
- $info = '<p>'. $beforeUniqueText . $uniqueHits . '</p>';
+ $info = '<p>'. $beforeUniqueText . $uniqueHits . ',</p>';
  }
  
 } else {

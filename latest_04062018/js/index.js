@@ -42,39 +42,48 @@ setTimeout( function(){
 $(document).ready(function(){
 
   $("#mateo").mouseover(function() {
-    $( "#centertitle" ).text( "ServicesCélestes" );
+    $( "#centertitle .left-replace" ).text( "Services" );
+    $( "#centertitle .right-replace" ).text( "Célestes" );
   });
 
   $("#sherida").mouseover(function() {
-    $( "#centertitle" ).text( "HemelseDiensten" );
+    $( "#centertitle .left-replace" ).text( "Hemelse" );
+    $( "#centertitle .right-replace"  ).text( "Diensten" );
   });
 
   $("#asja").mouseover(function() {
-    $( "#centertitle" ).text( "HemelseDiensten" );
+    $( "#centertitle .left-replace").text( "Hemelse" );
+    $( "#centertitle .right-replace").text( "Diensten" );
   });
 
   $("#anastasia").mouseover(function() {
-  $( "#centertitle" ).text( "НебесныеСлужбы" );
+    $( "#centertitle .left-replace" ).text( "Небесные" );
+    $( "#centertitle .right-replace" ).text( "Службы" );
 });
 
 $("#julia").mouseover(function() {
-  $( "#centertitle" ).text( "ServiçosCelestes" );
+  $( "#centertitle .left-replace" ).text( "Serviços" );
+  $( "#centertitle .right-replace").text( "Celestes" );
 });
 
   $("#heikki").mouseover(function() {
-    $( "#centertitle" ).text( "TaivasPalvelut" );
+    $( "#centertitle .left-replace" ).text( "Taivas" );
+    $( "#centertitle .right-replace" ).text( "Palvelut" );
   });
 
   $("#stefanie").mouseover(function() {
-    $( "#centertitle" ).text( "HimmlischeDienste" );
+    $( "#centertitle .left-replace" ).text( "Himmlische" );
+    $("#centertitle .right-replace" ).text( "Dienste" );
   });
 
   $("#juan").mouseover(function() {
-    $( "#centertitle" ).text( "ServiciosCelestiales" );
+    $( "#centertitle .left-replace" ).text( "Servicios" );
+    $( "#centertitle .right-replace" ).text( "Celestiales" );
   });
 
   $("#tereza").mouseover(function() {
-    $( "#centertitle" ).text( "NebeskéSlužby" );
+    $( "#centertitle .left-replace" ).text( "Nebeské" );
+    $( "#centertitle .right-replace").text( "Služby" );
   });
 
 
@@ -83,8 +92,6 @@ $("#julia").mouseover(function() {
 if ($(window).width() < 768) {
   $(".trigger-paywall").css("pointer-events", "none");
 };
-
-
 
 
 
@@ -213,19 +220,6 @@ $(document).ready(function(){
     $(".paywall-contents").addClass("show-paywall-content-fast");
   });
 });
-
-
-/*paywall function*/
-
-if ($(window).width() < 768) {
-
-
-//var bColor = ($("body").css("background-color"));
-
- $(".trigger-paywall").css("pointer-events", "none");
- //$(".toptitles").css("background-color", bColor);
-  };
-
 
 
 

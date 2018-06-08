@@ -25,52 +25,54 @@ $(document).ready(function(){
         if (daymoods[n-1] == 'Angry') {
             $('body').addClass("afternoon-body");
             $('.mood').text("Angry");
-            $('.afternoon-watermark').addClass("show-watermark");
+            $('.morning-watermark, .morning-logos').addClass("show-during-time");
         }
         else if (daymoods[n-1] == 'Ready') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Ready");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods[n-1] == 'Worried') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Worried");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods[n-1] == 'Dreamy') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Dreamy");
             $('.morning-watermark, .morning-logos').addClass("show-during-time");
         }
         else if (daymoods[n-1] == 'Energised') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Energised");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods[n-1] == 'Very Worried') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Very Worried");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods[n-1] == 'Exited') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Exited");
             $('.afternoon-watermark').addClass("show-watermark");
         }
 
     } else if (thehours >= 12 && thehours < 18) {
+        $('.morning-watermark, .morning-logos').addClass("show-during-time");
+
         if (daymoods2[n-1] == 'Strong') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Strong");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods2[n-1] == 'Tragic') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Tragic");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods2[n-1] == 'Slow') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("SLow");
             $('.afternoon-watermark').addClass("show-watermark");
         }
@@ -80,17 +82,16 @@ $(document).ready(function(){
             $('.morning-watermark, .morning-logos').addClass("show-during-time");
         }
         else if (daymoods2[n-1] == 'Slacking') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Slacking");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods2[n-1] == 'Undecided') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Undecided");
             $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods2[n-1] == 'Chaotic') {
-            $('body').addClass("afternoon-color-body");
+            $('body').addClass("afternoon-body");
             $('.mood').text("Chaotic");
             $('.afternoon-watermark').addClass("show-watermark");
         }
@@ -98,13 +99,13 @@ $(document).ready(function(){
 
 
     } else if (thehours >= 18 && thehours < 24) {
-        $('body').addClass("evening-color-body");
+        $('body').addClass("evening-body");
         $('.morning-watermark').addClass("show-during-time");
         $('.mood').text( "Tired" );
 
 
     } else if (thehours >= 0 && thehours < 8) {
-        $('body').addClass("night-color-body");
+        $('body').addClass("night-body");
         $('.mood').text( "Sleeping" );
         $('.night-watermark, .night-logos').addClass("show-during-time");
         $('.day-thumb').addClass("hide-during-time");
