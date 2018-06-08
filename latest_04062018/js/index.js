@@ -214,7 +214,7 @@ $(document).ready(function(){
   });
 });
 
-<<<<<<< HEAD
+
 /*paywall function*/
 
 if ($(window).width() < 768) {
@@ -229,10 +229,7 @@ if ($(window).width() < 768) {
 
 
 
-   
 
-=======
->>>>>>> a068be86cce1d54790c7882f442d040702b1c092
 
 
 function randomFromTo(from, to){
