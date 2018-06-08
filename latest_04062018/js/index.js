@@ -44,58 +44,159 @@ $(document).ready(function(){
   $("#mateo").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Services" );
     $( "#centertitle .right-replace" ).text( "Célestes" );
+    $( "#bottomlefttitle .left-replace" ).text( "Services" );
+    $( "#bottomlefttitle .right-replace" ).text( "Célestes" );
   });
 
   $("#sherida").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Hemelse" );
     $( "#centertitle .right-replace"  ).text( "Diensten" );
+    $( "#bottomlefttitle .left-replace" ).text( "Hemelse" );
+    $( "#bottomlefttitle .right-replace"  ).text( "Diensten" );
   });
 
   $("#asja").mouseover(function() {
     $( "#centertitle .left-replace").text( "Hemelse" );
     $( "#centertitle .right-replace").text( "Diensten" );
+    $( "#bottomlefttitle .left-replace").text( "Hemelse" );
+    $( "#bottomlefttitle .right-replace").text( "Diensten" );
   });
 
   $("#anastasia").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Небесные" );
     $( "#centertitle .right-replace" ).text( "Службы" );
+    $( "#bottomlefttitle .left-replace").text( "Небесные" );
+    $( "#bottomlefttitle .right-replace").text( "Службы" );
 });
 
 $("#julia").mouseover(function() {
   $( "#centertitle .left-replace" ).text( "Serviços" );
   $( "#centertitle .right-replace").text( "Celestes" );
+  $( "#bottomlefttitle .left-replace").text( "Serviços" );
+  $( "#bottomlefttitle .right-replace").text( "Celestes" );
 });
 
   $("#heikki").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Taivas" );
     $( "#centertitle .right-replace" ).text( "Palvelut" );
+    $( "#bottomlefttitle .left-replace").text( "Taivas" );
+    $( "#bottomlefttitle .right-replace").text( "Palvelut" );
   });
 
   $("#stefanie").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Himmlische" );
     $("#centertitle .right-replace" ).text( "Dienste" );
+    $( "#bottomlefttitle .left-replace" ).text( "Himmlische" );
+    $("#bottomlefttitle .right-replace" ).text( "Dienste" );
   });
 
   $("#juan").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Servicios" );
     $( "#centertitle .right-replace" ).text( "Celestiales" );
+    $( "#bottomlefttitle .left-replace" ).text( "Servicios" );
+    $("#bottomlefttitle .right-replace" ).text( "Celestiales" );
   });
 
   $("#tereza").mouseover(function() {
     $( "#centertitle .left-replace" ).text( "Nebeské" );
-    $( "#centertitle .right-replace").text( "Služby" );
+    $( "#centertitle .right-replace").text( "Sluzby" );
+    $( "#bottomlefttitle .left-replace" ).text( "Nebeské" );
+    $( "#bottomlefttitle .right-replace").text( "Sluzby" );
   });
 
 
 });
 
-if ($(window).width() < 768) {
-  $(".trigger-paywall").css("pointer-events", "none");
-};
+
+$(function () {
+    var parent = $(".single-images .only-images");
+    var divs = $(".single-images .only-images img");
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+});
+
+$('.random').each(function(){
+
+    $(this).css({ 'top':randomXToY(0,10),
+        'left': randomXToY(0,10)
+    });
+});
+
+// in case it's useful, my random function is just:
+
+function randomXToY(minVal,maxVal,floatVal){
+    var randVal = minVal+(Math.random()*(maxVal-minVal));
+    return typeof floatVal=='undefined'?Math.round(randVal):randVal.toFixed(floatVal);
+}
+
 
 
 
 $(document).ready(function(){
+
+  $('#mateo-image').mouseover(function() {
+    $('#mateo').addClass("active-designer");
+  });
+  $('#mateo-image').mouseout(function() {
+    $('#mateo').removeClass("active-designer");
+  });
+
+  $('#julia-image').mouseover(function() {
+    $('#julia').addClass("active-designer");
+  });
+  $('#julia-image').mouseout(function() {
+    $('#julia').removeClass("active-designer");
+  });
+
+  $('#asja-image').mouseover(function() {
+    $('#asja').addClass("active-designer");
+  });
+  $('#asja-image').mouseout(function() {
+    $('#asja').removeClass("active-designer");
+  });
+
+  $('#anastasia-image').mouseover(function() {
+    $('#anastasia').addClass("active-designer");
+  });
+  $('#anastasia-image').mouseout(function() {
+    $('#anastasia').removeClass("active-designer");
+  });
+
+  $('#sherida-image').mouseover(function() {
+    $('#sherida').addClass("active-designer");
+  });
+  $('#sherida-image').mouseout(function() {
+    $('#sherida').removeClass("active-designer");
+  });
+
+  $('#heikki-image').mouseover(function() {
+    $('#heikki').addClass("active-designer");
+  });
+  $('#heikki-image').mouseout(function() {
+    $('#heikki').removeClass("active-designer");
+  });
+
+  $('#stefanie-image').mouseover(function() {
+    $('#stefanie').addClass("active-designer");
+  });
+  $('#stefanie-image').mouseout(function() {
+    $('#stefanie').removeClass("active-designer");
+  });
+
+  $('#juan-image').mouseover(function() {
+    $('#juan').addClass("active-designer");
+  });
+  $('#juan-image').mouseout(function() {
+    $('#juan').removeClass("active-designer");
+  });
+
+  $('#tereza-image').mouseover(function() {
+    $('#tereza').addClass("active-designer");
+  });
+  $('#tereza-image').mouseout(function() {
+    $('#tereza').removeClass("active-designer");
+  });
 
   $(document).keyup(function(e) {
     if (e.keyCode == 27) {

@@ -605,7 +605,13 @@ a{
 }
 
 .active-designer {
-  text-shadow: 1px 0px #000000;
+  transition: all 0.2s;
+transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  display: inline-block;
+
 }
 
 
@@ -911,15 +917,37 @@ a{
 
 /* from 9am -12am working */
 /* substate */
+.work-body {
+  background-color: #fff;
+}
 
-.afternoon-body {
+/* monday */
+.angry-body {
+background-color: red;
+  .thumb {
+    filter: blur(5px) invert(0%) !important;
+    &:hover {
+      filter: blur(0) invert(0) !important;
+    }
+  }
+}
+
+/* tuesday */
+.ready-body {
+  background-color: #fff;
+}
+
+/* wednesday */
+.ready-body {
   background-color: #fff;
 }
 
 
+
 /* working from 12pm till 8pm */
 
-.afternoon-nervous-body {
+
+.nervous-body {
   background-color: inherit;
 
   .thumb {
@@ -932,26 +960,51 @@ a{
 
 }
 
+.slacking-body {
+  background-color: inherit;
+
+  .thumb {
+    filter: url(#duotone) blur(20px) invert(0%) !important;
+    border-radius: 300px;
+    &:hover {
+      filter: url(none) blur(0) invert(0) !important;
+      border-radius: 0;
+    }
+  }
+
+
+}
+
+.exited-body {
+  .thumb {
+    filter: blur(10px) invert(30%) !important;
+
+ &:hover {
+   filter: blur(0) invert(0) !important;
+ }
+  }
+}
+
 
 /* evening from 8pm - 12pm */
 
 .evening-body {
-  background-color: #303e18;
+  background-color: #424b32;
   color: #4b0202;
   text-shadow: 0 0 8px #b20404;
 
+  .designer-content {
+    color: #250900;
+    text-shadow: 0 0 1px #000000;
+  }
 
+  .thumb {
+    filter: blur(10px) invert(10%) !important;
 
-  /*&:after {
-    animation: grain 8s steps(10) infinite;
-    content: "";
-    height: 300%;
-    left: -50%;
-    opacity: 0.3;
-    position: fixed;
-    top: -110%;
-    width: 300%;
-  }*/
+    &:hover {
+      filter: blur(0) invert(0) !important;
+  }
+
 
   @keyframes grain {
     0%, 100% { transform:translate(0, 0) }
@@ -976,6 +1029,8 @@ a{
   border-radius: 0;
 }
 }
+}
+
 
 /* night from 12pm till 9am */
 
@@ -984,8 +1039,8 @@ a{
   color: #fff;
 
   .designer-content {
-    color: #dedede !important;
-    text-shadow: 1px 0px #ddd !important;
+    color: #dedede ;
+    text-shadow: 1px 0px #ddd ;
   }
 
   .lefttext {
@@ -1051,7 +1106,9 @@ a{
 
 
 
-
+.credits-mobile {
+  display: none;
+}
 
 #centertitle-mobile {
   display: none;
@@ -1060,6 +1117,26 @@ a{
 /* Mobile Styles */
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 768px) {
+
+
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .designer-content {
+    color: #000 !important;
+  }
+
+  .credits-mobile {
+    display: block !important;
+
+    p {
+      display: block;
+      margin-bottom: 1em;
+    }
+  }
 
   #centertitle-mobile {
     display: block !important;
@@ -1079,8 +1156,12 @@ a{
     border: 3px solid #fbff00;
     max-height: 80vh; }
 
-  #tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle, #bottomlefttitle, #bottomrighttitle, .righttext, #centertitle {
-    display: none; }
+  .trigger-paywall {
+    pointer-events:none !important;
+  }
+
+  #tinylogo, .logos, .bottom-paremeters, .paywall, .night-thumb, #lefttitle, #righttitle, #bottomlefttitle, #bottomrighttitle, .righttext, #centertitle {
+    display: none !important; }
 
   .toptitles, #centertitle {
     height: 11%;

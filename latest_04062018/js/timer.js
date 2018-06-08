@@ -2,8 +2,8 @@ $(document).ready(function(){
 
     var d = new Date();
     var n = d.getDay();
-    var daymoods = ['Angry', 'Ready', 'Worried', 'Dreamy', 'Energised', 'Very Worried', 'Exited'];
-    var daymoods2 = ['Strong', 'Tragic', 'Slow', 'Nervous', 'Slacking', 'Undecided', 'Chaotic'];
+    var daymoods = ['Angry', 'Ready', 'Worried', 'Dreamy', 'Energised', 'Slow', 'Exited'];
+    var daymoods2 = ['Slacking', 'Tragic', 'Slow', 'Nervous', 'Exited', 'Undecided', 'Chaotic'];
    // function getMessage() {
    //     return daymoods[Math.floor(Math.random() * daymoods.length)];
     // }
@@ -13,98 +13,87 @@ $(document).ready(function(){
 
         //getting ready
 
-    if (thehours >= 8 && thehours < 9) {
+    if (thehours >= 8 && thehours < 10) {
         $('body').addClass("morning-body");
         $('.mood').text( "Hopeful" );
         $('.morning-watermark, .morning-logos').addClass("show-during-time");
         $('.thumb').addClass("thumbs-morning");
 
         //working
-    } else if (thehours >= 9 && thehours < 12) {
+    } else if (thehours >= 10 && thehours < 14) {
+        $('.work-watermark, .work-logos').addClass("show-during-time");
         //submode: Angry
         if (daymoods[n-1] == 'Angry') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("angry-body");
             $('.mood').text("Angry");
-            $('.morning-watermark, .morning-logos').addClass("show-during-time");
         }
         else if (daymoods[n-1] == 'Ready') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("work-body");
             $('.mood').text("Ready");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods[n-1] == 'Worried') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("work-body");
             $('.mood').text("Worried");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods[n-1] == 'Dreamy') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("work-body");
             $('.mood').text("Dreamy");
-            $('.morning-watermark, .morning-logos').addClass("show-during-time");
         }
         else if (daymoods[n-1] == 'Energised') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("work-body");
             $('.mood').text("Energised");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
-        else if (daymoods[n-1] == 'Very Worried') {
-            $('body').addClass("afternoon-body");
-            $('.mood').text("Very Worried");
-            $('.afternoon-watermark').addClass("show-watermark");
+        else if (daymoods[n-1] == 'Confused') {
+            $('body').addClass("work-body");
+            $('.mood').text("Slow");
         }
         else if (daymoods[n-1] == 'Exited') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("work-body");
             $('.mood').text("Exited");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
 
-    } else if (thehours >= 12 && thehours < 18) {
-        $('.morning-watermark, .morning-logos').addClass("show-during-time");
+    } else if (thehours >= 14 && thehours < 18) {
+        $('.work-watermark, .work-logos').addClass("show-during-time");
 
-        if (daymoods2[n-1] == 'Strong') {
-            $('body').addClass("afternoon-body");
-            $('.mood').text("Strong");
-            $('.afternoon-watermark').addClass("show-watermark");
-        }
-        else if (daymoods2[n-1] == 'Tragic') {
-            $('body').addClass("afternoon-body");
-            $('.mood').text("Tragic");
-            $('.afternoon-watermark').addClass("show-watermark");
-        }
-        else if (daymoods2[n-1] == 'Slow') {
-            $('body').addClass("afternoon-body");
-            $('.mood').text("SLow");
-            $('.afternoon-watermark').addClass("show-watermark");
-        }
-        else if (daymoods2[n-1] == 'Nervous') {
-            $('body').addClass("afternoon-nervous-body");
-            $('.mood').text("Nervous");
-            $('.morning-watermark, .morning-logos').addClass("show-during-time");
-        }
-        else if (daymoods2[n-1] == 'Slacking') {
-            $('body').addClass("afternoon-body");
+        if (daymoods2[n-1] == 'Slacking') {
+            $('body').addClass("slacking-body");
             $('.mood').text("Slacking");
         }
+        else if (daymoods2[n-1] == 'Tragic') {
+            $('body').addClass("exited-body");
+            $('.mood').text("Tragic");
+        }
+        else if (daymoods2[n-1] == 'Slow') {
+            $('body').addClass("exited-body");
+            $('.mood').text("Slow");
+        }
+        else if (daymoods2[n-1] == 'Nervous') {
+            $('body').addClass("nervous-body");
+            $('.mood').text("Nervous");
+        }
+        else if (daymoods2[n-1] == 'Exited') {
+            $('body').addClass("exited-body");
+            $('.mood').text("Exited");
+        }
         else if (daymoods2[n-1] == 'Undecided') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("exited-body");
             $('.mood').text("Undecided");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
         else if (daymoods2[n-1] == 'Chaotic') {
-            $('body').addClass("afternoon-body");
+            $('body').addClass("exited-body");
             $('.mood').text("Chaotic");
-            $('.afternoon-watermark').addClass("show-watermark");
         }
 
 
 
-    } else if (thehours >= 18 && thehours < 24) {
+    } else if (thehours >= 18 && thehours < 20) {
         $('body').addClass("evening-body");
-        $('.morning-watermark').addClass("show-during-time");
+        $('.evening-watermark, .evening-logos').addClass("show-during-time");
+        $('.night-thumb').addClass("show-during-time-thumb");
         $('.mood').text( "Tired" );
 
 
-    } else if (thehours >= 0 && thehours < 8) {
+    } else if (thehours >= 20 && thehours < 8) {
         $('body').addClass("night-body");
         $('.mood').text( "Sleeping" );
         $('.night-watermark, .night-logos').addClass("show-during-time");
