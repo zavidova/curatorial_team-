@@ -521,7 +521,7 @@ p.map {
 
 
 /* On screens that are 992px or less, set the background color to blue */
-<<<<<<< HEAD
+
 @media screen and (max-width: 678px) {
 
 
@@ -617,11 +617,11 @@ display: inline;
   overflow-x: hidden;
 }
 
-=======
+
 @media screen and (max-width: 992px) {
   .desktop {
     display: none; }
->>>>>>> a068be86cce1d54790c7882f442d040702b1c092
+
 
   .mobile {
     display: inline;
