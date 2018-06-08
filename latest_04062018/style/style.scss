@@ -42,6 +42,24 @@ html *
   100% {filter: hue-rotate(0deg);}
 }
 
+
+@keyframes jiggle {
+1% {transform: translate(0px, 0px) rotate(0deg); }
+5% {transform: translate(1px, -1px) rotate(-1deg)}
+10% {transform: translate(2px, -2px) rotate(0deg)}
+15% {transform: translate(3px, -3px) rotate(1deg)}
+20% {transform: translate(2px, -2px) rotate(0deg)}
+25% {transform: translate(1px, -1px) rotate(-1deg)}
+30% {transform: translate(0px, 0px) rotate(0deg)}
+35% {transform: translate(-1px, 1px) rotate(1deg)}
+40% {transform: translate(-2px, 2px) rotate(0deg)}
+45% {transform: translate(-3px, 3px) rotate(-1deg)}
+50% {transform: translate(-2px, 2px) rotate(1deg)}
+100% {transform: translate(0px, 0px) rotate(1deg)}
+}
+// end jiggle
+
+
 @font-face {
   font-family: 'Herculanum';
   src: url('../assets/fonts/Herculanum.woff2') format('woff2'),
@@ -54,7 +72,7 @@ html *
 @font-face {
   font-family: 'PMingLiU';
   src: url('../assets/fonts/PMingLiU.woff') format('woff'),
-  url('../assets/fonts/PMingLiU.ttf') format('truetype');
+  url('../assets/fonts/PMingLiU.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -70,10 +88,11 @@ body{
   height: 100vh;
   line-height: 110%;
   overflow: hidden;
+
 }
 
 a{
-  color: initial;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -100,7 +119,13 @@ a{
   top:0;
   opacity: 0.3;
   width: 100%;
+
+  img {
+    display: none;
+  }
+
 }
+
 .title{
   font-style: italic;
   font-size: 90%;
@@ -242,20 +267,29 @@ a{
 .lefttext{
   transition: all 0.2s;
   position: absolute;
-  left: 6px;
-  top: 30px;
+  left: 24px;
+  top: 40px;
   text-align: left;
+
+  .skew {
+    transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    display: inline-block;
+  }
 }
 
 .righttext{
   position: absolute;
-  right: 6px;
-  top: 30px;
+  right: 24px;
+  top: 40px;
   text-align: right;
-  z-index: 3;
 }
 
+
 .logos {
+  display: none;
   position: absolute;
   right: 0;
   bottom: 4px;
@@ -286,19 +320,8 @@ a{
   display: none; }
 
 
-/* KARINA css */
 
 
-
-
-
-/* hourly changes */
-
-/*
-.day { background-color:  #E8E8E8; }
-.sunset { background-color: #C0C0C0; }
-.night { background-color: #696969; }
-*/
 
 
 
@@ -693,6 +716,8 @@ a{
     right: -8%; } }
 */
 
+/* ornaments */
+
 #tail {
   position: absolute;
   background: green;
@@ -726,21 +751,369 @@ a{
   bottom:-3px;
 }
 
+.red-block-1 {
+   position: absolute;
+   width: 3px;
+   height: 3px;
+   left: 50px;
+   top:0;
+   background-color: #ff0000;
+ }
+
+.red-block-2 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  left: 60px;
+  top:0;
+  background-color: #ff0000;
+}
+
+.blue-block-1 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  left: 100px;
+  top:0;
+  background-color: #000fff;
+}
+
+.blue-block-2 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  left: 118px;
+  bottom:0;
+  background-color: #000fff;
+}
+
+.blue-block-3 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  left: 108px;
+  bottom:0;
+  background-color: #000fff;
+}
+
+.blue-block-4 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  right: 100px;
+  bottom:0;
+  background-color: #000fff;
+}
+
+.blue-block-5 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  right: 24px;
+  top:0;
+  background-color: #000fff;
+}
+
+.red-block-3 {
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  right: 68px;
+  top:0;
+  background-color: #ff0000;
+}
+
+.red-block-4 {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  right: 32px;
+  top:0;
+  background-color: #ff0000;
+}
 /* time changes */
 
-.morning-color-body {
-  background-color: yellow;
+.show-during-time {
+  display: block !important;
 }
+.show-during-time-thumb {
+  display: inline-block !important;
+}
+.hide-during-time {
+  display: none !important;
+}
+
+.day-thumb {
+  display: inline-block;
+}
+
+.night-thumb {
+  display: none;
+}
+
+/* morning */
+
+.morning-body {
+  background: #fceabb;
+  background: -webkit-linear-gradient(to top, #f8b500, #fceabb);
+  background: linear-gradient(to top, #f8b500, #fceabb);
+
+
+  .thumb {
+    filter: blur(10px) invert(10%) !important;
+    pointer-events:none;
+  }
+
+}
+
+
+/* from 9am -12am working */
+/* substate */
 
 .afternoon-color-body {
   background-color: inherit;
 }
 
-.evening-color-body {
-  background-color: orange;
+
+/* working from 12pm till 8pm */
+
+.afternoon-nervous-body {
+  background-color: inherit;
+
+  .thumb {
+    animation-name: jiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+
 }
 
-.night-color-body {
- background-color: #282700;
+
+/* evening from 8pm - 12pm */
+
+.evening-color-body {
+  background-color: #303e18;
+  color: #4b0202;
+  text-shadow: 0 0 8px #b20404;
+
+
+
+  /*&:after {
+    animation: grain 8s steps(10) infinite;
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -110%;
+    width: 300%;
+  }*/
+
+  @keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
 }
+
+.thumbs-evening {
+  filter: blur(50px) invert(0) !important;
+  border-radius: 40%;
+
+&:hover {
+  filter: blur(0px) invert(0) !important;
+  border-radius: 0;
+}
+}
+
+/* night from 12pm till 9am */
+
+.night-color-body {
+  background: #000;
+  color: #fff;
+
+  .designer-content {
+    color: #dedede !important;
+    text-shadow: 1px 0px #ddd !important;
+  }
+
+  .lefttext {
+    pointer-events: none;
+  }
+
+  .thumb{
+    mix-blend-mode: color-burn;
+    filter: blur(12px) invert(60%);
+
+    &:hover {
+      filter: invert(0);
+    }
+  }
+
+  .timer, #clock, .location, .position, .counter  {
+    opacity: 0;
+  }
+
+}
+
+.night-watermark,.night-logos {
+  filter: invert(100%);
+}
+
+
+
+
+
+
+
+.display-morning, .display-afternoon, .display-evening, .display-night {
+  display:block;
+}
+
+
+
+.random {
+  position: relative;
+  margin: 20px;
+  padding-top: 20px;
+}
+
+
+.thumb {
+  z-index: 0;
+  filter: blur(10px) invert(58%);
+  mix-blend-mode: exclusion;
+  opacity: 0.7;
+  max-height: 30vh;
+  width: auto;
+}
+
+.pointer-events-off {
+  pointer-events: none;
+}
+
+.invert {
+  filter: invert(90%);
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+
+/* Mobile Styles */
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 768px) {
+
+  .button:active
+  { outline: 0;
+    background-color: yellow ;
+
+  }
+
+  .paywall {
+    background-color: none;
+    padding-top: 2rem;
+  }
+
+
+  .paywall .paywall-contents {
+
+    width: 95%;
+    margin: 3vh auto;
+    border: 3px solid #fbff00;
+    max-height: 80vh;
+  }
+
+
+  #tinylogo, .logos, .bottom-paremeters, #lefttitle, #righttitle,  #bottomlefttitle, #bottomrighttitle, .righttext {
+    display: none;
+  }
+
+  .toptitles, #centertitle {
+
+    height: 11%;
+    width: 100%;
+    background-color: inherit; /*change*/
+    top: 0;
+    position: fixed;
+    z-index: 200;
+  }
+
+
+  #centertitle {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    top: 6px;
+  }
+
+  .single-images img {
+    display: none;
+  }
+
+  .lefttext {
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 50%;
+  }
+
+  .maincontainer {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+
+  .designer-content {
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+    width: 96%;
+    display: inline;
+    margin: 0 auto;
+    top: -17px;
+    z-index: 1;
+    position: relative;
+    overflow-y: scroll;
+    float: none;
+    text-align: left;
+    direction: rtl;
+
+  }
+
+  .designer-content img {
+    width: 96%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main-content p {
+    width: 96%;
+  }
+  .main-content {
+    overflow: hidden;
+    margin-bottom: 150px;
+
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
 
