@@ -76,8 +76,11 @@ a {
   display: inline-block;
 }
 
+p.map {
+  visibility: none;
+  display: none;
 
-
+}
 /*added stuff ends here*/
 
 .thumb {
@@ -113,6 +116,9 @@ a {
   z-index: 2;
 }
 
+#centertitle-mobile {
+  display: none;
+}
 
 
 .fullborder-top-left {
@@ -508,8 +514,18 @@ line-height: 1.2;
 .project img {
   max-width: 200px; }
 
+
+
+
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 678px) {
+
+
+p.map {
+  display: inline;
+  visibility: visible;
+  font-size: 1.3rem;
+}
   
 .button:active
 { outline: 0;
@@ -536,25 +552,50 @@ background-color: yellow ;
   display: none;
 }
 
-.toptitles, #centertitle {
+.toptitles{
+height: 1.2em;
+}
 
-height: 11%;
+.morning-color-body .toptitles {
+background-color: yellow;
+}
+
+.afternoon-color-body .toptitles {
+background-color: inherit; /*check!*/
+}
+.evening-color-body .toptitles {
+background-color: orange;
+}
+
+.night-color-body .toptitles {
+background-color: #282700;
+}
+
+
+.toptitles, #centertitle-mobile {
+
 width: 100%;
-background-color: inherit; /*change*/
+font-size: 0.9em;
+
 top: 0;
 position: fixed;
 z-index: 200;
 }
 
-
 #centertitle {
+  display: none;
+}
+
+#centertitle-mobile {
 text-align: center;
-position: fixed;
-width: 100%;
 margin: 0 auto;
 left: 0;
-top: 6px;
+top: 2px;
+display: inline;
+
 }
+
+
 
 .single-images img {
   display: none;

@@ -202,7 +202,12 @@ $(document).ready(function(){
 /*paywall function*/
 
 if ($(window).width() < 768) {
+
+
+//var bColor = ($("body").css("background-color"));
+
  $(".trigger-paywall").css("pointer-events", "none");
+ //$(".toptitles").css("background-color", bColor);
   };
 
 
