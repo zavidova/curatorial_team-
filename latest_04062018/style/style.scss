@@ -82,9 +82,9 @@ html *
 
 body{
   font-size: 2.2rem;
-  background-color: #ecece7;
+  background-color: #fff;
   font-family: 'PMingLiU', Times New Roman, Serif;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.01rem;
   height: 100vh;
   line-height: 2.4rem;
   overflow: hidden;
@@ -100,8 +100,8 @@ a{
 .thumb{
   position: fixed;
   width: 10%;
-  z-index: 0;
-  filter: blur(10px) invert(58%);
+  z-index: 3;
+  filter: blur(10px) invert(10%);
   mix-blend-mode: exclusion;
   opacity: 0.7;
 }
@@ -124,6 +124,10 @@ a{
     display: none;
   }
 
+}
+
+.defs-only {
+  display: none;
 }
 
 .title{
@@ -226,7 +230,7 @@ a{
   margin-left: 20px;
   margin-right: 20px;
   top: 20px;
-  height: 88vh;
+  height: 89vh;
   border-bottom: 2px solid #888;
 
 }
@@ -244,6 +248,7 @@ a{
 }
 
 #centertitle{
+  font-weight: 300;
   position: fixed;
   left: 40%;
   top: 0;
@@ -251,6 +256,7 @@ a{
 }
 
 #bottomlefttitle{
+  font-weight: 300;
   position: fixed;
   bottom: 0;
   left: 18%;
@@ -267,6 +273,7 @@ a{
 .lefttext{
   transition: all 0.2s;
   position: absolute;
+  z-index: 5;
   top: 40px;
   text-align: left;
 
@@ -286,6 +293,16 @@ a{
   top: 40px;
   z-index: 50;
   text-align: right;
+
+
+  a:hover {
+    transition: all 0.2s;
+    transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    display: inline-block;
+  }
 }
 
 
@@ -294,7 +311,7 @@ a{
   position: absolute;
   right: 0;
   bottom: 4px;
-  width: 45vw;
+  width: 30vw;
 }
 
 
@@ -303,7 +320,7 @@ a{
   display: flex;
   width: 100vw;
   /* padding: 0 2%; */
-  top: 90vh;
+  top: 91vh;
   position: fixed;
   font-family: Herculanum, Times, Serif;
   font-size: 1vw;
@@ -367,7 +384,8 @@ a{
     margin: 3vh auto;
     border: 3px solid #fbff00;
     height: 93vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: #fff;
 
     .paywall-inner-contents {
@@ -386,7 +404,7 @@ a{
       line-height: normal;
       letter-spacing: normal;
       padding: 10px 30px;
-      text-shadow: 0 1px #ddd;
+     /* text-shadow: 0 1px #ddd;*/
 
     }
 
@@ -546,23 +564,19 @@ a{
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s;
-  font-size: 1em;
+  font-size: 90%;
+  line-height: 108%;
   width: 96%;
-  padding: 40px 1vw 0;
+  padding: 57px 20px 20px;
   color: #250900;
-  text-shadow: 0 0 1px #828282;
-  /* border: 11px solid; */
-  margin: 0 auto;
-  /* padding: 1em; */
-  /* left: 30vw; */
-  /* left: 10vw; */
-  /* left: 30vw; */
+  margin: 0 auto 20px;
   top: -17px;
   z-index: 1;
-  height: calc(88vh - 22px);
-  /* background-color: #e5e5e5; */
+  height: calc(89vh - 60px);
   position: absolute;
-  overflow: scroll;
+  overflow-y: scroll;
+  direction: rtl;
+  overflow-x: hidden;
   float: left;
   text-align: left;
   direction: rtl;
@@ -578,6 +592,7 @@ a{
     float: left;
     text-align: left;
     direction: initial;
+    margin: 10px 0;
   }
 
   i {
@@ -587,7 +602,7 @@ a{
   p {
     float: left;
     text-align: left;
-    width: 70vw;
+    width: 63vw;
     direction: initial;
   }
 }
@@ -767,14 +782,15 @@ transform: skewX(-20deg);
 }
 
 #tail {
-  position: absolute;
+  position: fixed;
   background: green;
   max-width:100vw;
   height: 3px;
+  top:0;
 }
 
 #tail-vert {
-  position: absolute;
+  position: fixed;
   background: green;
   max-height:100vh;
   top: 3px;
@@ -782,7 +798,7 @@ transform: skewX(-20deg);
 }
 
 #tail-right {
-  position: absolute;
+  position: fixed;
   background: green;
   max-width:100vw;
   height: 3px;
@@ -791,7 +807,7 @@ transform: skewX(-20deg);
 }
 
 #tail-vert-right {
-  position: absolute;
+  position: fixed;
   background: green;
   max-height:100vh;
   width: 3px;
@@ -800,7 +816,7 @@ transform: skewX(-20deg);
 }
 
 .red-block-1 {
-   position: absolute;
+   position: fixed;
    width: 3px;
    height: 3px;
    left: 50px;
@@ -809,7 +825,7 @@ transform: skewX(-20deg);
  }
 
 .red-block-2 {
-  position: absolute;
+  position: fixed;
   width: 3px;
   height: 3px;
   left: 60px;
@@ -818,7 +834,7 @@ transform: skewX(-20deg);
 }
 
 .blue-block-1 {
-  position: absolute;
+  position: fixed;
   width: 20px;
   height: 3px;
   left: 100px;
@@ -827,7 +843,7 @@ transform: skewX(-20deg);
 }
 
 .blue-block-2 {
-  position: absolute;
+  position: fixed;
   width: 3px;
   height: 3px;
   left: 118px;
@@ -836,7 +852,7 @@ transform: skewX(-20deg);
 }
 
 .blue-block-3 {
-  position: absolute;
+  position: fixed;
   width: 3px;
   height: 3px;
   left: 108px;
@@ -845,7 +861,7 @@ transform: skewX(-20deg);
 }
 
 .blue-block-4 {
-  position: absolute;
+  position: fixed;
   width: 3px;
   height: 3px;
   right: 100px;
@@ -854,7 +870,7 @@ transform: skewX(-20deg);
 }
 
 .blue-block-5 {
-  position: absolute;
+  position: fixed;
   width: 3px;
   height: 3px;
   right: 24px;
@@ -863,7 +879,7 @@ transform: skewX(-20deg);
 }
 
 .red-block-3 {
-  position: absolute;
+  position: fixed;
   width: 10px;
   height: 3px;
   right: 68px;
@@ -872,7 +888,7 @@ transform: skewX(-20deg);
 }
 
 .red-block-4 {
-  position: absolute;
+  position: fixed;
   width: 3px;
   height: 3px;
   right: 32px;
@@ -892,6 +908,7 @@ transform: skewX(-20deg);
 }
 
 .day-thumb {
+  cursor:pointer;
   display: inline-block;
 }
 
@@ -1040,8 +1057,9 @@ background-color: red;
 
   .designer-content {
     color: #dedede ;
-    text-shadow: 1px 0px #ddd ;
+    /*text-shadow: 1px 0px #ddd ;*/
   }
+
 
   .lefttext {
     pointer-events: none;
@@ -1086,9 +1104,9 @@ background-color: red;
 
 
 .thumb {
-  z-index: 0;
-  filter: blur(10px) invert(58%);
-  mix-blend-mode: exclusion;
+  z-index: 3;
+  filter: blur(10px) invert(30%);
+  mix-blend-mode: color-dodge;
   opacity: 0.7;
   max-height: 30vh;
   width: auto;
@@ -1114,23 +1132,116 @@ background-color: red;
   display: none;
 }
 
-/* Mobile Styles */
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 768px) {
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
 
+  body {
+    background-image: url("../assets/watermarks/watermark1.svg");
+  }
+
+  .designer-content {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .paywall {
+    display:none !important;
+  }
+
+  .paywall .paywall-contents {
+    display:none !important;
+  }
+
+  .trigger-paywall {
+    pointer-events:none !important;
+  }
+
+  .watermark {
+    display: none !important;
+  }
+
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
 
   body {
     background-color: #fff !important;
     color: #000 !important;
     text-shadow: none !important;
+    font-size: 6vw;
+    line-height: 7vw;
+    height: inherit;
+    overflow: visible;
+    background-image: url("../assets/watermarks/watermark1.svg") !important;
+  }
+
+  #tail, #tail-vert, #tail-right, #tail-vert-right {
+    display: none !important;
+  }
+
+
+  .fullborder-bottom-right{
+
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      z-index: 100;
+      bottom: -3px;
+      width: 3px;
+      height: 50%;
+      background: #328e21;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      z-index: 100;
+      bottom: -6px;
+      height: 3px;
+      width: 50%;
+      background: #328e21;
+    }
+  }
+
+  .fullborder-top-left{
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        top: -3px;
+        width: 3px;
+        height: 50%;
+        background: #328e21;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        top: -6px;
+    height: 3px;
+        width: 50%;
+        background: #328e21;
+      }
+
   }
 
   .designer-content {
     color: #000 !important;
+    text-shadow: none !important;
   }
 
   .credits-mobile {
     display: block !important;
+    margin-bottom: 10vh;
 
     p {
       display: block;
@@ -1140,21 +1251,42 @@ background-color: red;
 
   #centertitle-mobile {
     display: block !important;
+    height: 20px;
   }
+
+
+  .marquee {
+    position: fixed;
+    top:1vh;
+    left:0;
+    z-index:500;
+
+    span {
+      margin-left: 31vw;
+    }
+
+    .ru {
+      font-family: "Helvetica Neue",arial, sans-serif;
+      font-weight: 300;
+    }
+  }
+
+  .watermark {
+    display: none !important;
+  }
+
 
   .button:active {
     outline: 0;
     background-color: yellow; }
 
   .paywall {
-    background-color: none;
-    padding-top: 2rem; }
+    display:none !important;
+  }
 
   .paywall .paywall-contents {
-    width: 95%;
-    margin: 3vh auto;
-    border: 3px solid #fbff00;
-    max-height: 80vh; }
+    display:none !important;
+  }
 
   .trigger-paywall {
     pointer-events:none !important;
@@ -1188,10 +1320,19 @@ background-color: red;
     position: relative;
     padding-bottom: 50%; }
 
+
+
   .maincontainer {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden; }
+    height: auto;
+    position: relative;
+    top:0;
+    margin-top: 0;
+    border-bottom: 0;
+   /* overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    */
+    }
 
   .designer-content {
     visibility: visible;
@@ -1200,6 +1341,8 @@ background-color: red;
     width: 96%;
     display: inline;
     margin: 0 auto;
+    font-size: 100%;
+    line-height: inherit;
     top: -17px;
     z-index: 1;
     position: relative;

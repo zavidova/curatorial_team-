@@ -13,7 +13,7 @@ $(document).ready(function(){
 
         //getting ready
 
-    if (thehours >= 8 && thehours < 10) {
+    if (thehours >= 7 && thehours < 10) {
         $('body').addClass("morning-body");
         $('.mood').text( "Hopeful" );
         $('.morning-watermark, .morning-logos').addClass("show-during-time");
@@ -43,16 +43,16 @@ $(document).ready(function(){
             $('body').addClass("work-body");
             $('.mood').text("Energised");
         }
-        else if (daymoods[n-1] == 'Confused') {
+        else if (daymoods[n-1] == 'Slow') {
             $('body').addClass("work-body");
             $('.mood').text("Slow");
         }
-        else if (daymoods[n-1] == 'Exited') {
+        else if (d.getDay() == 0) {
             $('body').addClass("work-body");
             $('.mood').text("Exited");
         }
 
-    } else if (thehours >= 14 && thehours < 18) {
+    } else if (thehours >= 14 && thehours < 21) {
         $('.work-watermark, .work-logos').addClass("show-during-time");
 
         if (daymoods2[n-1] == 'Slacking') {
@@ -79,21 +79,26 @@ $(document).ready(function(){
             $('body').addClass("exited-body");
             $('.mood').text("Undecided");
         }
-        else if (daymoods2[n-1] == 'Chaotic') {
+        else if (d.getDay() == 0) {
             $('body').addClass("exited-body");
             $('.mood').text("Chaotic");
         }
 
 
 
-    } else if (thehours >= 18 && thehours < 20) {
-        $('body').addClass("evening-body");
-        $('.evening-watermark, .evening-logos').addClass("show-during-time");
+    } else if (thehours >= 21 && thehours < 24) {
+  //     $('body').addClass("evening-body");
+  //     $('.evening-watermark, .evening-logos').addClass("show-during-time");
+  //  $('.night-thumb').addClass("show-during-time-thumb");
+  //     $('.mood').text( "Tired" );
+        $('body').addClass("night-body");
+        $('.mood').text( "Sleeping" );
+        $('.night-watermark, .night-logos').addClass("show-during-time");
+        $('.day-thumb').addClass("hide-during-time");
         $('.night-thumb').addClass("show-during-time-thumb");
-        $('.mood').text( "Tired" );
 
 
-    } else if (thehours >= 20 && thehours < 8) {
+    } else if (thehours >= 0 && thehours < 7) {
         $('body').addClass("night-body");
         $('.mood').text( "Sleeping" );
         $('.night-watermark, .night-logos').addClass("show-during-time");

@@ -3,14 +3,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CelestialServices</title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" type="text/css" href="js/simple-scrollbar.css">
-	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+	<meta property="og:url"                content="https://sandberg.nl/design/celestialservices/" />
+	<meta property="og:title"              content="CelestialServices" />
+	<meta property="og:description"        content="CelestialServices brings together the 2018 Graduation works of the Design Department.
+Embracing subjective states, moods and alternate ways of encountering, the works inhabit both a daytime exhibition context and a nocturnal life during De School’s nightclub hours. Over these days and nights and throughout the different spaces of De School, an event programme of presentations, readings, radio and performance will further explore the potential for alternative contextual meanings." />
+	<meta property="og:image"              content="https://sandberg.nl/design/celestialservices/assets/event_banner.jpg" />
+	<link rel="stylesheet" type="text/css" href="style/style.min.css">
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" ></script>
+	<script src='https://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
 	<script src='js/simple-scrollbar.min.js'></script>
-	<script type="text/javascript" src="js/timer.js"></script>
-	<!--<meta http-equiv="refresh" content="30"/> this refreshes the page every 30 seconds-->
+	<script type="text/javascript" src="js/timer.min.js"></script>
+	<link rel="stylesheet" href="js/simplebar.css">
+	<script src="js/simplebar.js"></script>
 </head>
 
 <body>
@@ -39,7 +44,7 @@
 <?php require("vcounter.php"); ?>
 <div class="paywall">
 	<div class="paywall-contents">
-		<div ss-container class="paywall-inner-contents">
+		<div data-simplebar class="paywall-inner-contents">
 		<?php echo $info; ?>
 
 			<p>Welcome to <i style="font-style:italic;">Celestial</i>Services.</p>
@@ -53,7 +58,7 @@
 		<div class="credits">
 		<p>Graduation Jury<br>
 
-		Gabrielle Kenedy, Michael Tedja, Rana Ghavami, Anja Groten, Agata Jaworska, Rob Schröder, Daniel van der Velden, Rogier Klomp</p>
+		Gabrielle Kennedy, Michael Tedja, Rana Ghavami, Anja Groten, Agata Jaworska, Rob Schröder, Daniel van der Velden, Rogier Klomp</p>
 
 		<p>Curatorial Team<br>
 		Agata Jaworska, Lucie de Bréchard, Sascha Krischock, Alexander Walker, Karina Zavidova</p>
@@ -93,13 +98,15 @@
 
 	<div class="toptitles" style="cursor:crosshair;"> <!--K added clickable area for reload, problem: it also calls for the popup :(  value = "Refresh" onclick="history.go(0)"-->
 		<div id="centertitle" class=title><span class="left-replace">Celestial</span><span class="right-replace">Services</span></div>
-		<div id="centertitle-mobile" class="title"><marquee>Services<span>Célestes</span> Hemelse<span>Diensten</span> Celestial<span>Services</span> Hemelse<span>Diensten</span> Небесные<span>Службы</span> Serviços<span>Celestes Taivas<span>Palvelut</span> Himmlische<span>Dienste</span> Servicios<span>Celestiales</span> Nebeské<span>Sluzby</span></marquee></div>
 		<div id="lefttitle" class=title>Serviços<span>Celestes</span></div>
 		<div id="righttitle" class=title>Celestial<span>Services</span></div>
 		<div id="bottomlefttitle" class=title><span class="left-replace">Celestial</span><span class="right-replace">Services</span></div>
 		<div id="bottomrighttitle" class=title>Celestial<span>Services</span></div>
 
 	</div>
+
+	<div class="marquee" id="centertitle-mobile" data-direction='right'><span>ServicesCélestes</span><span>HemelseDiensten</span><span>CelestialServices</span><span>HemelseDiensten</span><span class="ru">НебесныеСлужбы</span><span>ServiçosCelestes</span><span>TaivasPalvelut</span><span>HimmlischeDienste</span><span>ServiciosCelestiales</span><span>NebeskéSluzby</span></div>
+
 
 
 	<div class="single-images">
@@ -206,12 +213,27 @@
 			<i>User-Agent</i>
 		</div>
 		<div class="main-content">
+			<div class="img-wrapper">
 			<img src="images/final_projects/anastasia_1.jpg">
+				</div>
 			<p>
 				Today, any inhabitant of a city is treated as a computational User by default. Smooth interfaces and real-time feedback loops augment our urban experiences, making us feel empowered, while subjecting us to processes of profiling, quantification, optimisation and isolation. However, the sense of comfort and personal freedom that is gained comes at the cost of political agency and autonomy.
 			</p>
 			<p>
 				Drawing on a series of interviews with practitioners, ranging from policy researchers to UX designers, Anastasia Kubrak gives insight into what it means to be a human User in today’s technological infrastructures. What strategies can we employ to gain more agency? How can we become aware of our own position and be re-politicised?
+			</p><br><br>
+			<p style="margin-top:1em;"><i>If everything is so smooth, why am I so sad?</i></p>
+		</div>
+		<div class="main-content">
+			<div class="img-wrapper">
+			<img src="images/final_projects/anastasia_3.jpg">
+				</div>
+			<p>
+				<i>Always available and updating, eating coffee for dinner, sexting about a meeting tomorrow morning...</i><br>
+				While algorithmic systems of governance remain invisible to us, we experience the byproducts of platform economy in the form of exhaustion, continuous burn-out, and inexplicable sadness. Generated by the iOS and Android “predictive typing” function, these automated messages represent how platforms see their average User.
+			</p>
+			<p>
+				How do we internalise the urban-scale processes of optimisation, measurement, and assessment? As algorithms anticipate our every next word, they accidentally reveal the collective subjectivity that all Users have in common.
 			</p>
 		</div>
 	</section>
@@ -242,8 +264,7 @@
 			<p>
 				<i>GlyphDrawing.club</i> is a contemporary texmode graphics editor with endless possibilities for making custom modular type design, illustrations, pattern design, concrete poetry, ASCII art and much more. The editor is inspired by old-school ASCII art editors, keeping some of the limitations of textmode art but bringing it to modern times; with the editor you can use any font and any glyph to create your compositions. The editor also comes with a custom "Truchet tile / FontStruct" style typeface for making modular design, and a variety of other fonts for making more traditional ASCII art.
 			</p>
-			<p><a href="www.glyphdrawing.club" target="_blank">www.glyphdrawing.club</a>
-			</p>
+			<p><a href="http://www.glyphdrawing.club/" target="_blank">www.glyphdrawing.club</a></p>
 		</div>
 	</section>
 
@@ -307,7 +328,7 @@
 	<div class="credits-mobile">
 		<p>Graduation Jury<br>
 
-			Gabrielle Kenedy, Michael Tedja, Rana Ghavami, Anja Groten, Agata Jaworska, Rob Schröder, Daniel van der Velden, Rogier Klomp</p>
+			Gabrielle Kennedy, Michael Tedja, Rana Ghavami, Anja Groten, Agata Jaworska, Rob Schröder, Daniel van der Velden, Rogier Klomp</p>
 
 		<p>Curatorial Team<br>
 			Agata Jaworska, Lucie de Bréchard, Sascha Krischock, Alexander Walker, Karina Zavidova</p>
@@ -325,7 +346,7 @@
 
 <!------>
 
-<div class="logos"><img src="assets/logos.svg"></div>
+<div class="logos"><img src="assets/logos/logos.svg"></div>
 <div class="logos morning-logos"><img src="assets/logos/logos_transparent.svg"></div>
 <div class="logos work-logos"><img src="assets/logos/logos_transparent.svg"></div>
 <div class="logos evening-logos"><img src="assets/logos/logos_transparent.svg"></div>
@@ -333,7 +354,7 @@
 
 <div class="bottom-paremeters" style="cursor: crosshair;"> <!--K added clickable area for reload, same issues as the top one value = "Refresh" onclick="history.go(0)"  -->
 
-	<div>Mood: <span class="mood">Moody</span>
+	<div>Mood: <span class="mood">Exited</span>
 	</div>
 
 
@@ -346,13 +367,8 @@
 
 
 	<div class="location">
-		<script language="Javascript">
-			document.write(geoplugin_countryCode());
-		</script>
-		<span> </span>
-		<script language="Javascript">
-			document.write(geoplugin_continentCode());
-		</script>
+		<span class="city"></span>
+		<span class="country-code"></span>
 	</div>
 
 	<div class="counter">
@@ -414,9 +430,8 @@
 
 
 
-<script  src="js/index.js"></script>
+<script  src="js/index.min.js"></script>
 
-</div>
 
 </body>
 </html>

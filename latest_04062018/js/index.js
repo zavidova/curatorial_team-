@@ -41,63 +41,75 @@ setTimeout( function(){
 
 $(document).ready(function(){
 
-  $("#mateo").mouseover(function() {
+    var helvetica = 'helvetica neue, arial, helvetica, sans-serif';
+    var ming = 'PMingLiU, sans-serif';
+
+  $("#mateo, #mateo-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace" ).text( "Services" );
     $( "#centertitle .right-replace" ).text( "Célestes" );
     $( "#bottomlefttitle .left-replace" ).text( "Services" );
     $( "#bottomlefttitle .right-replace" ).text( "Célestes" );
   });
 
-  $("#sherida").mouseover(function() {
+  $("#sherida, #sherida-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace" ).text( "Hemelse" );
     $( "#centertitle .right-replace"  ).text( "Diensten" );
     $( "#bottomlefttitle .left-replace" ).text( "Hemelse" );
     $( "#bottomlefttitle .right-replace"  ).text( "Diensten" );
   });
 
-  $("#asja").mouseover(function() {
+  $("#asja, #asja-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace").text( "Hemelse" );
     $( "#centertitle .right-replace").text( "Diensten" );
     $( "#bottomlefttitle .left-replace").text( "Hemelse" );
     $( "#bottomlefttitle .right-replace").text( "Diensten" );
   });
 
-  $("#anastasia").mouseover(function() {
+  $("#anastasia, #anastasia-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':helvetica});
     $( "#centertitle .left-replace" ).text( "Небесные" );
     $( "#centertitle .right-replace" ).text( "Службы" );
     $( "#bottomlefttitle .left-replace").text( "Небесные" );
     $( "#bottomlefttitle .right-replace").text( "Службы" );
 });
 
-$("#julia").mouseover(function() {
+$("#julia, #julia-image").mouseover(function() {
+    $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
   $( "#centertitle .left-replace" ).text( "Serviços" );
   $( "#centertitle .right-replace").text( "Celestes" );
   $( "#bottomlefttitle .left-replace").text( "Serviços" );
   $( "#bottomlefttitle .right-replace").text( "Celestes" );
 });
 
-  $("#heikki").mouseover(function() {
+  $("#heikki, #heikki-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace" ).text( "Taivas" );
     $( "#centertitle .right-replace" ).text( "Palvelut" );
     $( "#bottomlefttitle .left-replace").text( "Taivas" );
     $( "#bottomlefttitle .right-replace").text( "Palvelut" );
   });
 
-  $("#stefanie").mouseover(function() {
+  $("#stefanie, #stefanie-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace" ).text( "Himmlische" );
     $("#centertitle .right-replace" ).text( "Dienste" );
     $( "#bottomlefttitle .left-replace" ).text( "Himmlische" );
     $("#bottomlefttitle .right-replace" ).text( "Dienste" );
   });
 
-  $("#juan").mouseover(function() {
+  $("#juan, #juan-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace" ).text( "Servicios" );
     $( "#centertitle .right-replace" ).text( "Celestiales" );
     $( "#bottomlefttitle .left-replace" ).text( "Servicios" );
     $("#bottomlefttitle .right-replace" ).text( "Celestiales" );
   });
 
-  $("#tereza").mouseover(function() {
+  $("#tereza, #tereza-image").mouseover(function() {
+      $("#centertitle, #bottomlefttitle").css({ 'font-family':ming});
     $( "#centertitle .left-replace" ).text( "Nebeské" );
     $( "#centertitle .right-replace").text( "Sluzby" );
     $( "#bottomlefttitle .left-replace" ).text( "Nebeské" );
@@ -106,6 +118,22 @@ $("#julia").mouseover(function() {
 
 
 });
+
+$.get("https://api.ipdata.co", function (response) {
+    $( ".location .city" ).text(response.country_code);
+    $( ".location .country-code" ).text(response.continent_code);
+}, "jsonp");
+
+$('.marquee').marquee({
+    direction: 'right',
+    startVisible: true,
+    duplicated:true,
+    pauseOnHover:true,
+    duration: 60000,
+    delayBeforeStart:100,
+    gap:0
+});
+
 
 
 $(function () {
@@ -218,84 +246,84 @@ $(document).ready(function(){
 
 
 
-  $('#mateo').click(function(){
+  $('#mateo, #mateo-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#mateo').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.mateo-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
 
-  $('#julia').click(function(){
+  $('#julia, #julia-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#julia').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.julia-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  $('#anastasia').click(function(){
+  $('#anastasia, #anastasia-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#anastasia').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.anastasia-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  $('#asja').click(function(){
+  $('#asja, #asja-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#asja').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.asja-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
 
-  $('#sherida').click(function(){
+  $('#sherida, #sherida-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#sherida').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.sherida-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  $('#stefanie').click(function(){
+  $('#stefanie, #stefanie-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#stefanie').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.stefanie-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  $('#heikki').click(function(){
+  $('#heikki, #heikki-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#heikki').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.heikki-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  $('#juan').click(function(){
+  $('#juan, #juan-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('.righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#juan').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.juan-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
   });
 
-  $('#tereza').click(function(){
+  $('#tereza, #tereza-image').click(function(){
     $( '.thumb' ).addClass( "pointer-events-off" );
     $('#righttext a').removeClass("active-designer");
-    $(this).addClass("active-designer");
+    $('#tereza').addClass("active-designer");
     $('.designer-content').removeClass("show-content");
     $('.tereza-content').addClass("show-content");
     $('.lefttext').addClass("hide-content");
